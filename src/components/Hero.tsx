@@ -98,21 +98,22 @@ export function Hero() {
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/25 to-transparent" />
               </div>
               <div
-                className="pointer-events-none absolute -bottom-1 -left-1 h-14 w-24 rotate-[-8deg] rounded-lg bg-gradient-to-br from-slate-800 to-slate-900 shadow-xl ring-2 ring-white/80 sm:-bottom-2 sm:-left-2 sm:h-16 sm:w-28"
-                aria-hidden
+                className={cn(
+                  "pointer-events-none absolute -bottom-2 -left-2 z-10 rotate-[-8deg] sm:-bottom-3 sm:-left-3",
+                  "drop-shadow-[0_12px_28px_rgba(0,0,0,0.35)]"
+                )}
               >
-                <div className="flex h-full flex-col justify-between p-1.5 sm:p-2">
-                  <div className="flex justify-center gap-1">
-                    {Array.from({ length: 3 }).map((_, i) => (
-                      <span key={i} className="h-1 w-3 rounded-full bg-white/30 sm:w-4" />
-                    ))}
-                  </div>
-                  <div className="grid grid-cols-3 gap-0.5 px-0.5 sm:gap-1 sm:px-1">
-                    {Array.from({ length: 9 }).map((_, i) => (
-                      <span key={i} className="aspect-square rounded bg-white/10" />
-                    ))}
-                  </div>
-                </div>
+                <div
+                  className="absolute -inset-3 -z-10 rounded-3xl bg-[#22c1f1]/25 blur-2xl"
+                  aria-hidden
+                />
+                <Image
+                  src="/images/iptv-ui.jpg"
+                  alt="IPTV Smarters interface preview"
+                  width={220}
+                  height={140}
+                  className="max-h-[140px] w-auto max-w-[min(220px,calc(100vw-2.5rem))] rounded-xl border border-white/20 object-cover shadow-lg"
+                />
               </div>
             </div>
           </div>
