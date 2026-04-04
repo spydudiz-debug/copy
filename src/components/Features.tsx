@@ -50,18 +50,18 @@ export function Features() {
             <div className="relative rounded-2xl bg-gradient-to-br from-[#ff2a7f]/20 via-[#a855f7]/20 to-[#22c1f1]/30 p-4 shadow-xl sm:p-6">
               <div
                 className={cn(
-                  "relative mx-auto aspect-[4/3] w-full max-w-sm overflow-hidden rounded-xl bg-slate-900 shadow-2xl ring-4 ring-white/50",
-                  "transition duration-300 ease-out hover:ring-white/70"
+                  "group relative mx-auto aspect-[4/3] w-full max-w-sm overflow-hidden rounded-2xl bg-slate-900 shadow-xl ring-4 ring-white/50",
+                  "transition duration-300 ease-out hover:ring-white/70 hover:shadow-2xl"
                 )}
               >
                 <Image
-                  src="/images/tablet-streaming.jpg"
-                  alt="Tablet displaying streaming TV app with movies and live channels"
+                  src="/images/iptv-ui.jpg"
+                  alt="IPTV Smarters app interface"
                   fill
-                  className="object-cover object-center"
+                  className="object-cover object-center transition duration-300 ease-out group-hover:scale-105"
                   sizes="(max-width: 1024px) 90vw, 40vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/25 to-transparent" />
               </div>
             </div>
           </div>

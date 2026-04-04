@@ -77,34 +77,34 @@ export function Devices() {
             <div className="relative h-[min(26rem,72vh)] w-full max-w-sm sm:h-[28rem] lg:h-[26.25rem]">
               <div
                 className={cn(
-                  "absolute left-2 top-4 z-10 w-[52%] rotate-[-6deg] overflow-hidden rounded-[2rem] bg-slate-900 shadow-2xl ring-4 ring-white/50",
+                  "group absolute left-2 top-4 z-10 w-[52%] rotate-[-6deg] overflow-hidden rounded-2xl bg-slate-900 shadow-xl ring-4 ring-white/50",
                   "transition duration-300 ease-out will-change-transform hover:z-20 hover:-translate-y-1 hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.35)]",
                   "sm:left-4 sm:top-6"
                 )}
               >
                 <div className="relative aspect-[9/18] w-full">
                   <Image
-                    src="/images/device-phone-1.jpg"
-                    alt="Modern smartphone displaying live IPTV channels and streaming guide"
+                    src="/images/iptv-ui.jpg"
+                    alt="IPTV Smarters app interface"
                     fill
-                    className="object-cover object-center"
+                    className="object-cover object-center transition duration-300 ease-out group-hover:scale-105"
                     sizes="(max-width: 1024px) 45vw, 200px"
                   />
                 </div>
               </div>
               <div
                 className={cn(
-                  "absolute right-2 top-14 z-[11] w-[52%] rotate-[8deg] overflow-hidden rounded-[2rem] bg-slate-900 shadow-2xl ring-4 ring-white/50",
+                  "group absolute right-2 top-14 z-[11] w-[52%] rotate-[8deg] overflow-hidden rounded-2xl bg-slate-900 shadow-xl ring-4 ring-white/50",
                   "transition duration-300 ease-out will-change-transform hover:z-20 hover:-translate-y-1 hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.35)]",
                   "sm:right-4 sm:top-16"
                 )}
               >
                 <div className="relative aspect-[9/18] w-full">
                   <Image
-                    src="/images/device-phone-2.jpg"
-                    alt="Smartphone playing sports and movies on a streaming app"
+                    src="/images/iptv-ui.jpg"
+                    alt="IPTV Smarters app interface"
                     fill
-                    className="object-cover object-center"
+                    className="object-cover object-center transition duration-300 ease-out group-hover:scale-105"
                     sizes="(max-width: 1024px) 45vw, 200px"
                   />
                 </div>

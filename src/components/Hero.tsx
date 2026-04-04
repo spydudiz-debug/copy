@@ -86,16 +86,16 @@ export function Hero() {
                 "sm:p-3"
               )}
             >
-              <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-slate-100">
+              <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl bg-slate-100 shadow-xl">
                 <Image
-                  src="/images/hero-streaming-tv.jpg"
-                  alt="Live IPTV streaming interface with movies and shows on a smart TV screen"
+                  src="/images/football.jpg"
+                  alt="Watching live football on IPTV"
                   fill
-                  className="object-cover object-center"
+                  className="object-cover object-center transition duration-300 ease-out group-hover:scale-105"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent" />
+                <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/25 to-transparent" />
               </div>
               <div
                 className="pointer-events-none absolute -bottom-1 -left-1 h-14 w-24 rotate-[-8deg] rounded-lg bg-gradient-to-br from-slate-800 to-slate-900 shadow-xl ring-2 ring-white/80 sm:-bottom-2 sm:-left-2 sm:h-16 sm:w-28"

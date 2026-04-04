@@ -80,23 +80,17 @@ export function Setup() {
             <div className="relative rounded-2xl bg-gradient-to-br from-[#14b8a6]/30 to-[#22c1f1]/40 p-6 shadow-xl sm:p-8">
               <div
                 className={cn(
-                  "relative mx-auto aspect-[9/16] w-full max-w-[260px] overflow-hidden rounded-[2rem] bg-slate-900 shadow-2xl ring-4 ring-white/40",
+                  "group relative mx-auto aspect-[9/16] w-full max-w-[260px] overflow-hidden rounded-2xl bg-slate-900 shadow-xl ring-4 ring-white/40",
                   "sm:max-w-[280px]"
                 )}
               >
                 <Image
-                  src="/images/phone-iptv-app.jpg"
-                  alt="Smartphone showing IPTV streaming app with live TV and on-demand content"
+                  src="/images/iptv-ui.jpg"
+                  alt="IPTV Smarters app interface"
                   fill
-                  className="object-cover object-center"
+                  className="object-cover object-center transition duration-300 ease-out group-hover:scale-105"
                   sizes="(max-width: 1024px) 70vw, 320px"
                 />
-                <div className="absolute inset-x-3 top-8 rounded-2xl bg-white/95 p-3.5 shadow-lg backdrop-blur-sm sm:inset-x-4 sm:top-10 sm:p-4">
-                  <p className="text-center text-[0.6875rem] font-semibold text-[#0f172a] sm:text-xs">Welcome back</p>
-                  <div className="mt-2.5 h-2 w-full rounded-full bg-slate-100 sm:mt-3" />
-                  <div className="mt-2 h-2 w-full rounded-full bg-slate-100" />
-                  <div className="mx-auto mt-3 h-8 w-24 rounded-full bg-[#0f172a] sm:mt-4" />
-                </div>
               </div>
             </div>
           </div>
