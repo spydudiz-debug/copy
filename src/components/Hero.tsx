@@ -89,7 +89,7 @@ export function Hero() {
               <div className="group relative aspect-[4/3] overflow-hidden rounded-2xl bg-slate-100 shadow-xl">
                 <Image
                   src="/images/hero-tv.jpg"
-                  alt="Watching live TV on IPTV at home in a modern living room"
+                  alt="Watching live football on IPTV on a big screen in a modern living room"
                   fill
                   className="object-cover object-center transition duration-300 ease-out group-hover:scale-105"
                   sizes="(max-width: 1024px) 100vw, 50vw"
