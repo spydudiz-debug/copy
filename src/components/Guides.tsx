@@ -8,23 +8,23 @@ import { Section } from "@/components/ui/Section";
 const guidePosts = [
   {
     title: "Best IPTV for Firestick",
-    image: "https://images.unsplash.com/photo-1593784991091-a49a97de43ff?w=200&q=80",
-    alt: "Amazon Fire TV Stick",
+    image: "/images/guide-firestick.jpg",
+    alt: "Home cinema screen with movies and streaming entertainment",
   },
   {
     title: "IPTV Buffering: Fixes That Actually Work",
-    image: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=200&q=80",
-    alt: "Streaming buffering concept",
+    image: "/images/guide-streaming.jpg",
+    alt: "Watching live TV and streaming content at home",
   },
   {
     title: "Smart TV Setup in Under 10 Minutes",
-    image: "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=200&q=80",
-    alt: "Living room smart TV",
+    image: "/images/guide-smarttv.jpg",
+    alt: "Modern smart TV in a living room for streaming IPTV",
   },
   {
     title: "Choosing the Right IPTV Plan",
-    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=200&q=80",
-    alt: "Planning and budgeting",
+    image: "/images/guide-planning.jpg",
+    alt: "Choosing an IPTV subscription and entertainment plan",
   },
 ] as const;
 

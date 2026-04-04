@@ -88,10 +88,10 @@ export function Hero() {
             >
               <div className="relative aspect-[4/3] overflow-hidden rounded-xl bg-slate-100">
                 <Image
-                  src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=900&q=80"
-                  alt="Live sports streaming on a TV dashboard interface"
+                  src="/images/hero-streaming-tv.jpg"
+                  alt="Live IPTV streaming interface with movies and shows on a smart TV screen"
                   fill
-                  className="object-cover"
+                  className="object-cover object-center"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   priority
                 />

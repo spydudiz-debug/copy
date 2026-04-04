@@ -55,10 +55,10 @@ export function Features() {
                 )}
               >
                 <Image
-                  src="https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=800&q=80"
-                  alt="Tablet showing a streaming app interface"
+                  src="/images/tablet-streaming.jpg"
+                  alt="Tablet displaying streaming TV app with movies and live channels"
                   fill
-                  className="object-cover"
+                  className="object-cover object-center"
                   sizes="(max-width: 1024px) 90vw, 40vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />

@@ -84,10 +84,10 @@ export function Devices() {
               >
                 <div className="relative aspect-[9/18] w-full">
                   <Image
-                    src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=400&q=80"
-                    alt="Mobile app browsing channels"
+                    src="/images/device-phone-1.jpg"
+                    alt="Modern smartphone displaying live IPTV channels and streaming guide"
                     fill
-                    className="object-cover"
+                    className="object-cover object-center"
                     sizes="(max-width: 1024px) 45vw, 200px"
                   />
                 </div>
@@ -101,10 +101,10 @@ export function Devices() {
               >
                 <div className="relative aspect-[9/18] w-full">
                   <Image
-                    src="https://images.unsplash.com/photo-1556656793-08538906a9f8?w=400&q=80"
-                    alt="Mobile app player screen"
+                    src="/images/device-phone-2.jpg"
+                    alt="Smartphone playing sports and movies on a streaming app"
                     fill
-                    className="object-cover"
+                    className="object-cover object-center"
                     sizes="(max-width: 1024px) 45vw, 200px"
                   />
                 </div>

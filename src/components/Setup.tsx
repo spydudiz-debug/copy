@@ -85,10 +85,10 @@ export function Setup() {
                 )}
               >
                 <Image
-                  src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&q=80"
-                  alt="Smartphone showing app login screen"
+                  src="/images/phone-iptv-app.jpg"
+                  alt="Smartphone showing IPTV streaming app with live TV and on-demand content"
                   fill
-                  className="object-cover"
+                  className="object-cover object-center"
                   sizes="(max-width: 1024px) 70vw, 320px"
                 />
                 <div className="absolute inset-x-3 top-8 rounded-2xl bg-white/95 p-3.5 shadow-lg backdrop-blur-sm sm:inset-x-4 sm:top-10 sm:p-4">
