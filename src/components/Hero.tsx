@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Container } from "@/components/ui/Container";
+import { IPTV_STORE_URL } from "@/lib/constants";
 import { cn } from "@/lib/cn";
 
 function StarRow() {
@@ -25,9 +26,9 @@ function StarRow() {
 }
 
 const btnPrimary =
-  "inline-flex h-12 min-w-[148px] items-center justify-center rounded-full bg-[#0f172a] px-7 text-sm font-semibold text-white shadow-lg shadow-black/20 transition duration-300 ease-out hover:scale-[1.02] hover:brightness-110 active:scale-[0.98] sm:min-w-[160px] sm:px-8";
+  "inline-flex h-12 min-w-[148px] cursor-pointer items-center justify-center rounded-full bg-[#0f172a] px-7 text-sm font-semibold text-white shadow-lg shadow-black/20 transition duration-300 ease-out hover:scale-[1.02] hover:brightness-110 active:scale-[0.98] sm:min-w-[160px] sm:px-8";
 const btnGhost =
-  "inline-flex h-12 min-w-[148px] items-center justify-center rounded-full border-2 border-white bg-white/5 px-7 text-sm font-semibold text-white backdrop-blur-sm transition duration-300 ease-out hover:scale-[1.02] hover:bg-white/15 active:scale-[0.98] sm:min-w-[160px] sm:px-8";
+  "inline-flex h-12 min-w-[148px] cursor-pointer items-center justify-center rounded-full border-2 border-white bg-white/5 px-7 text-sm font-semibold text-white backdrop-blur-sm transition duration-300 ease-out hover:scale-[1.02] hover:bg-white/15 active:scale-[0.98] sm:min-w-[160px] sm:px-8";
 
 export function Hero() {
   return (
@@ -68,10 +69,10 @@ export function Hero() {
             </div>
 
             <div className="animate-fade-up animate-delay-300 flex flex-col items-stretch gap-3 sm:flex-row sm:justify-center sm:gap-4 lg:justify-start">
-              <Link href="#subscription" className={btnPrimary}>
+              <Link href={IPTV_STORE_URL} className={btnPrimary}>
                 Get Started
               </Link>
-              <Link href="#subscription" className={btnGhost}>
+              <Link href={IPTV_STORE_URL} className={btnGhost}>
                 Get Free
               </Link>
             </div>

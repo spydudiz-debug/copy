@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { Container } from "@/components/ui/Container";
+import { IPTV_STORE_URL } from "@/lib/constants";
 import { cn } from "@/lib/cn";
 
 export function CTA() {
@@ -21,9 +22,9 @@ export function CTA() {
           refund. No tricks, no runaround.
         </p>
         <Link
-          href="#subscription"
+          href={IPTV_STORE_URL}
           className={cn(
-            "mt-8 inline-flex h-12 min-w-[168px] items-center justify-center rounded-full bg-white px-9 text-sm font-semibold text-[#0f172a] shadow-xl shadow-black/15",
+            "mt-8 inline-flex h-12 min-w-[168px] cursor-pointer items-center justify-center rounded-full bg-white px-9 text-sm font-semibold text-[#0f172a] shadow-xl shadow-black/15",
             "transition duration-300 ease-out hover:scale-[1.03] hover:brightness-95 active:scale-[0.98] sm:mt-10 sm:min-w-[180px] sm:px-10",
             "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/80 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent"
           )}

@@ -5,9 +5,10 @@ import { useEffect, useState } from "react";
 
 import { cn } from "@/lib/cn";
 import { Container } from "@/components/ui/Container";
+import { IPTV_STORE_URL } from "@/lib/constants";
 
 const links = [
-  { href: "#subscription", label: "IPTV Subscription" },
+  { href: IPTV_STORE_URL, label: "IPTV Subscription" },
   { href: "#setup-guide", label: "Setup Guide" },
   { href: "#blog", label: "Blog" },
   { href: "#contact", label: "Contact" },
@@ -66,11 +67,11 @@ export function Navbar() {
 
           <ul className="hidden items-center gap-6 lg:gap-8 xl:gap-10 md:flex">
             {links.map((item) => (
-              <li key={item.href}>
+              <li key={item.label}>
                 <Link
                   href={item.href}
                   className={cn(
-                    "text-sm font-medium transition-colors duration-300 lg:text-[0.9375rem]",
+                    "cursor-pointer text-sm font-medium transition-colors duration-300 lg:text-[0.9375rem]",
                     navText
                   )}
                 >
@@ -115,11 +116,11 @@ export function Navbar() {
         <Container className="py-3">
           <ul className="flex flex-col gap-0.5">
             {links.map((item) => (
-              <li key={item.href}>
+              <li key={item.label}>
                 <Link
                   href={item.href}
                   className={cn(
-                    "block rounded-xl px-3 py-3 text-[0.9375rem] font-medium transition-colors duration-300",
+                    "block cursor-pointer rounded-xl px-3 py-3 text-[0.9375rem] font-medium transition-colors duration-300",
                     scrolled ? "text-[#0f172a] hover:bg-black/[0.04]" : "text-white hover:bg-white/10"
                   )}
                   onClick={() => setMobileOpen(false)}

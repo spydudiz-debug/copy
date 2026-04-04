@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 import { cn } from "@/lib/cn";
+import { IPTV_STORE_URL } from "@/lib/constants";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 
@@ -145,14 +146,14 @@ export function Pricing() {
               </p>
 
               <Link
-                href="#contact"
+                href={IPTV_STORE_URL}
                 className={cn(
-                  "mt-6 inline-flex h-12 items-center justify-center rounded-full px-6 text-sm font-semibold text-white",
+                  "mt-6 inline-flex h-12 cursor-pointer items-center justify-center rounded-full px-6 text-sm font-semibold text-white",
                   "transition duration-300 ease-out hover:scale-[1.02] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2",
                   plan.buttonClass
                 )}
               >
-                Get Started
+                Subscribe Now
               </Link>
 
               <ul className="mt-6 flex flex-col gap-2.5 text-left sm:mt-8 sm:gap-3">
