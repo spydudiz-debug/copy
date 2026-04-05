@@ -9,7 +9,7 @@ import { IPTV_STORE_URL } from "@/lib/constants";
 
 const links = [
   { href: IPTV_STORE_URL, label: "IPTV Subscription" },
-  { href: "#setup-guide", label: "Setup Guide" },
+  { href: "/step-guide", label: "Setup Guide" },
   { href: "#blog", label: "Blog" },
   { href: "#contact", label: "Contact" },
 ] as const;

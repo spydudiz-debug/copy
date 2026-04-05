@@ -75,14 +75,15 @@ export function Footer() {
             <ul className="mt-3 flex flex-col gap-2 text-sm font-medium text-white/70 sm:mt-4">
               {(
                 [
-                  ["Firestick"],
-                  ["Smart TV"],
-                  ["Android Box"],
-                  ["iOS & Apple TV"],
+                  ["Firestick", "/step-guide#amazon-firestick-fire-tv"],
+                  ["Smart TV", "/step-guide#smart-tv-samsung-lg-sony"],
+                  ["Android Box", "/step-guide#android-box-tv-box"],
+                  ["Windows PC", "/step-guide#windows-pc"],
+                  ["Formuler", "/step-guide#formuler-device"],
                 ] as const
-              ).map(([label]) => (
+              ).map(([label, href]) => (
                 <li key={label}>
-                  <Link href="#setup-guide" className="transition duration-300 hover:text-white">
+                  <Link href={href} className="transition duration-300 hover:text-white">
                     {label}
                   </Link>
                 </li>
