@@ -17,7 +17,7 @@ export function CTA() {
             </p>
           </div>
           <Link href={IPTV_STORE_URL} className="support-btn shrink-0">
-            <span className="support-btn-inner">Get Started</span>
+            Get Started
           </Link>
         </div>
       </Container>
