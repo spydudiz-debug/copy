@@ -1,0 +1,31 @@
+{
+  "batches": [
+    {
+      "id": 1,
+      "files": ["iptv", "best-iptv", "free-iptv", "iptv-m3u", "iptv-playlist", "iptv-m3u8"]
+    },
+    {
+      "id": 2,
+      "files": ["iptv-links", "live-tv-iptv", "iptv-channels-list", "iptv-subscription"]
+    },
+    {
+      "id": 3,
+      "files": [
+        "best-iptv-subscription",
+        "best-iptv-subscription-uk",
+        "best-iptv-service",
+        "premium-iptv",
+        "iptv-server"
+      ],
+      "unsplashImageIdsUsed": [
+        "1511707171634-5f897ff02aa9",
+        "1529257414772-1960b7bea539",
+        "1601972602237-8c79241ea74a",
+        "1504711434969-e33886168f5c",
+        "1611162617474-5b21e737e893"
+      ]
+    }
+  ],
+  "nextBatchStartsAtKeyword": "IPTV trial",
+  "note": "Slug for next batch first post: iptv-trial.md — see manifest.json for full order."
+}

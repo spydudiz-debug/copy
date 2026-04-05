@@ -17,7 +17,7 @@ Each `.md` file is one article with YAML frontmatter (`title`, `description`, `k
 | `iptv-playlist.md` | IPTV playlist |
 | `iptv-m3u8.md` | IPTV m3u8 |
 
-### Batch 2 (added)
+### Batch 2
 
 | File | Keyword |
 |------|---------|
@@ -26,6 +26,18 @@ Each `.md` file is one article with YAML frontmatter (`title`, `description`, `k
 | `iptv-channels-list.md` | IPTV channels list |
 | `iptv-subscription.md` | IPTV subscription |
 
-**Remaining keywords:** see `manifest.json` (~90+). Request **“blog content batch 3”** to continue—full list is large for a single generation pass.
+### Batch 3
+
+| File | Keyword |
+|------|---------|
+| `best-iptv-subscription.md` | Best IPTV subscription |
+| `best-iptv-subscription-uk.md` | Best IPTV subscription UK |
+| `best-iptv-service.md` | Best IPTV service |
+| `premium-iptv.md` | Premium IPTV |
+| `iptv-server.md` | IPTV server |
+
+**Batch tracker:** `batches.json` — next batch starts at **IPTV trial** → slug `iptv-trial.md`.
+
+**Remaining keywords:** see `manifest.json`. Request **“blog batch 4”** (5 posts) to continue.
 
 **Live route:** Posts are listed at **`/blog`** and each file is available at **`/blog/{slug}`** (see `src/lib/blog.ts` and `src/app/blog/`).
