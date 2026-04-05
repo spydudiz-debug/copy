@@ -84,8 +84,10 @@ export function Devices() {
               >
                 <div className="relative aspect-[9/18] w-full">
                   <Image
-                    src="/images/live-tv.jpg"
-                    alt="Live IPTV streaming on mobile"
+                    src="/images/live-sports.jpg"
+                    alt="Live sports streaming on IPTV"
+                    width={300}
+                    height={600}
                     fill
                     className="rounded-2xl object-cover object-center shadow-xl transition duration-300 ease-out group-hover:scale-105"
                     sizes="(max-width: 1024px) 45vw, 200px"
@@ -102,7 +104,9 @@ export function Devices() {
                 <div className="relative aspect-[9/18] w-full">
                   <Image
                     src="/images/movies-ui.jpg"
-                    alt="IPTV movies and series interface"
+                    alt="Movies and series streaming interface"
+                    width={300}
+                    height={600}
                     fill
                     className="rounded-2xl object-cover object-center shadow-xl transition duration-300 ease-out group-hover:scale-105"
                     sizes="(max-width: 1024px) 45vw, 200px"
