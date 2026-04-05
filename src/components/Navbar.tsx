@@ -58,7 +58,7 @@ export function Navbar() {
           <SiteLogo
             priority
             className={cn(
-              scrolled && "rounded-lg bg-[#0f172a] px-2 py-1.5 shadow-sm ring-1 ring-black/10"
+              scrolled && "rounded-lg bg-[#0f172a] px-2 py-1 shadow-sm ring-1 ring-black/10"
             )}
           />
 

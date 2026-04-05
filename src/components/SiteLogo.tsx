@@ -13,7 +13,9 @@ type SiteLogoProps = {
 
 export function SiteLogo({ variant = "nav", className, priority }: SiteLogoProps) {
   const imgClass =
-    variant === "nav" ? "h-8 w-auto sm:h-9 md:h-10" : "h-10 w-auto sm:h-11 md:h-12";
+    variant === "nav"
+      ? "h-9 w-auto sm:h-10 md:h-11"
+      : "h-12 w-auto sm:h-[3.25rem] md:h-14";
 
   return (
     <Link
@@ -29,9 +31,10 @@ export function SiteLogo({ variant = "nav", className, priority }: SiteLogoProps
       <Image
         src={LOGO}
         alt="SCOOP Media"
-        width={240}
-        height={64}
-        className={cn(imgClass, "w-auto")}
+        width={320}
+        height={84}
+        className={cn(imgClass, "w-auto object-contain object-left")}
+        sizes={variant === "nav" ? "(max-width: 768px) 220px, 280px" : "(max-width: 768px) 260px, 300px"}
         priority={priority}
       />
     </Link>
