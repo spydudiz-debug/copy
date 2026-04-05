@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 import { cn } from "@/lib/cn";
+import { SiteLogo } from "@/components/SiteLogo";
 import { Container } from "@/components/ui/Container";
 import { IPTV_STORE_URL, STEP_GUIDE_PATH } from "@/lib/constants";
 
@@ -55,15 +56,7 @@ export function Navbar() {
     >
       <Container className="flex h-16 items-center md:h-[4.5rem]">
         <nav className="flex w-full items-center justify-between" aria-label="Primary">
-          <Link
-            href="/"
-            className={cn(
-              "text-lg font-bold tracking-tight transition-colors duration-300 sm:text-xl",
-              logoClass
-            )}
-          >
-            SCOP
-          </Link>
+          <SiteLogo priority />
 
           <ul className="hidden items-center gap-6 lg:gap-8 xl:gap-10 md:flex">
             {links.map((item) => (

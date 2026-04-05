@@ -12,6 +12,10 @@ export const metadata: Metadata = {
   title: "SCOP — Best IPTV Provider",
   description:
     "Premium IPTV subscription with no buffering, HD & 4K streaming, and global datacenters. Trusted by 5,000+ customers.",
+  icons: {
+    icon: "/images/scoop-media-logo.png",
+    apple: "/images/scoop-media-logo.png",
+  },
 };
 
 export default function RootLayout({

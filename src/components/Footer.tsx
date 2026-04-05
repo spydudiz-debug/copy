@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { cn } from "@/lib/cn";
+import { SiteLogo } from "@/components/SiteLogo";
 import { STEP_GUIDE_PATH } from "@/lib/constants";
 import { Container } from "@/components/ui/Container";
 
@@ -13,7 +14,7 @@ export function Footer() {
       <Container>
         <div className="grid gap-10 sm:gap-12 md:grid-cols-2 lg:grid-cols-4 lg:gap-10 xl:gap-12">
           <div className="max-w-sm lg:max-w-none">
-            <p className="text-lg font-bold sm:text-xl">SCOP</p>
+            <SiteLogo variant="footer" />
             <p className="mt-3 text-sm font-medium leading-relaxed text-white/65 sm:mt-4">
               Premium IPTV with reliable streams, global infrastructure, and support that actually
               answers—built for viewers who want live TV without the cable bill.
