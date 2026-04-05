@@ -17,4 +17,4 @@ Each `.md` file is one article with YAML frontmatter (`title`, `description`, `k
 
 **Remaining keywords:** ~100+ (see `manifest.json`). Ask to continue generation in batches (e.g. “blog batch 2: next 15 slugs”) so each post stays unique and within word count.
 
-**Note:** The site does not yet wire these files into a `/blog` route—you can add a Next.js blog later or paste content into your CMS.
+**Live route:** Posts are listed at **`/blog`** and each file is available at **`/blog/{slug}`** (see `src/lib/blog.ts` and `src/app/blog/`).

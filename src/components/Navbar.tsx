@@ -6,12 +6,12 @@ import { useEffect, useState } from "react";
 import { cn } from "@/lib/cn";
 import { SiteLogo } from "@/components/SiteLogo";
 import { Container } from "@/components/ui/Container";
-import { IPTV_STORE_URL, STEP_GUIDE_PATH } from "@/lib/constants";
+import { BLOG_PATH, IPTV_STORE_URL, STEP_GUIDE_PATH } from "@/lib/constants";
 
 const links = [
   { href: IPTV_STORE_URL, label: "IPTV Subscription" },
   { href: STEP_GUIDE_PATH, label: "Setup Guides" },
-  { href: "#blog", label: "Blog" },
+  { href: BLOG_PATH, label: "Blog" },
   { href: "#contact", label: "Contact" },
 ] as const;
 
