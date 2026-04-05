@@ -45,7 +45,6 @@ export function Navbar() {
   const navText = scrolled
     ? "text-[#0f172a] hover:text-[#a855f7]"
     : "text-white hover:text-white/90";
-  const logoClass = scrolled ? "text-[#0f172a]" : "text-white";
 
   return (
     <header
@@ -56,7 +55,12 @@ export function Navbar() {
     >
       <Container className="flex h-16 items-center md:h-[4.5rem]">
         <nav className="flex w-full items-center justify-between" aria-label="Primary">
-          <SiteLogo priority />
+          <SiteLogo
+            priority
+            className={cn(
+              scrolled && "rounded-lg bg-[#0f172a] px-2 py-1.5 shadow-sm ring-1 ring-black/10"
+            )}
+          />
 
           <ul className="hidden items-center gap-6 lg:gap-8 xl:gap-10 md:flex">
             {links.map((item) => (
