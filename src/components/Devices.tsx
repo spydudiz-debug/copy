@@ -84,10 +84,10 @@ export function Devices() {
               >
                 <div className="relative aspect-[9/18] w-full">
                   <Image
-                    src="/images/iptv-ui.jpg"
-                    alt="IPTV Smarters app interface"
+                    src="/images/live-tv.jpg"
+                    alt="Live IPTV streaming on mobile"
                     fill
-                    className="object-cover object-center transition duration-300 ease-out group-hover:scale-105"
+                    className="rounded-2xl object-cover object-center shadow-xl transition duration-300 ease-out group-hover:scale-105"
                     sizes="(max-width: 1024px) 45vw, 200px"
                   />
                 </div>
@@ -101,10 +101,10 @@ export function Devices() {
               >
                 <div className="relative aspect-[9/18] w-full">
                   <Image
-                    src="/images/iptv-ui.jpg"
-                    alt="IPTV Smarters app interface"
+                    src="/images/movies-ui.jpg"
+                    alt="IPTV movies and series interface"
                     fill
-                    className="object-cover object-center transition duration-300 ease-out group-hover:scale-105"
+                    className="rounded-2xl object-cover object-center shadow-xl transition duration-300 ease-out group-hover:scale-105"
                     sizes="(max-width: 1024px) 45vw, 200px"
                   />
                 </div>
