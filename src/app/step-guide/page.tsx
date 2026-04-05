@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 
+import { CTA } from "@/components/CTA";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 import { StepGuideContent } from "@/components/StepGuideContent";
@@ -59,6 +60,7 @@ export default function StepGuidePage() {
             </div>
           </Container>
         </Section>
+        <CTA />
       </main>
       <Footer />
     </>
