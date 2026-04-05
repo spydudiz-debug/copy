@@ -5,7 +5,7 @@ import { IPTV_STORE_URL } from "@/lib/constants";
 
 export function CTA() {
   return (
-    <section className="bg-white py-16 sm:py-20 lg:py-24">
+    <section className="cta-section">
       <Container>
         <div className="cta-box">
           <div className="cta-text">

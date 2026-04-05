@@ -92,15 +92,35 @@ body {
   animation-delay: 300ms;
 }
 
-/* CTA block (home page) */
+/* CTA: solid white section — no animated gradient on the outer area */
+.cta-section {
+  padding: 5rem 1.25rem;
+  background: #fff;
+}
+
+@media (min-width: 640px) {
+  .cta-section {
+    padding: 5.5rem 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cta-section {
+    padding: 6.25rem 1.25rem;
+  }
+}
+
 .cta-box {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 45px 55px;
+  padding: 50px 60px;
   border-radius: 25px;
   background: linear-gradient(90deg, #a8cbd3, #d8a8c6);
-  margin-top: 40px;
+  box-shadow: 0 20px 40px -12px rgba(15, 23, 42, 0.12), 0 4px 12px -4px rgba(15, 23, 42, 0.08);
   flex-wrap: wrap;
 }
 
@@ -111,7 +131,7 @@ body {
 }
 
 .cta-text p {
-  color: #f5f5f5;
+  color: #f3f3f3;
   max-width: 520px;
   font-size: 16px;
 }
@@ -123,31 +143,31 @@ body {
   justify-content: center;
   background: linear-gradient(90deg, #00c6ff, #7b2ff7);
   color: #fff;
-  padding: 16px 38px;
+  padding: 16px 40px;
   border-radius: 40px;
   font-size: 18px;
   text-decoration: none;
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   isolation: isolate;
   overflow: visible;
 }
 
 .cta-btn:hover {
-  transform: translateY(-4px) scale(1.06);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+  transform: scale(1.08);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
 }
 
 .cta-btn:hover::after {
-  content: "🚀 Start Now";
+  content: "🚀 Click to Start";
   position: absolute;
-  top: -35px;
+  top: -38px;
   left: 50%;
   transform: translateX(-50%);
   background: #000;
   color: #fff;
-  padding: 6px 12px;
+  padding: 6px 14px;
   border-radius: 8px;
   font-size: 12px;
   white-space: nowrap;
@@ -161,14 +181,14 @@ body {
   border-radius: 40px;
   background: linear-gradient(90deg, #00dbde, #fc00ff);
   opacity: 0;
-  transition: 0.3s;
+  transition: opacity 0.3s ease;
   z-index: 0;
-  filter: blur(12px);
+  filter: blur(14px);
 }
 
 .cta-btn:hover::before {
   opacity: 1;
-  filter: blur(12px);
+  filter: blur(14px);
 }
 
 .cta-btn-inner {
