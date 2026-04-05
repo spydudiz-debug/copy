@@ -77,15 +77,15 @@ export function Devices() {
             <div className="relative h-[min(26rem,72vh)] w-full max-w-sm sm:h-[28rem] lg:h-[26.25rem]">
               <div
                 className={cn(
-                  "group absolute left-2 top-4 z-10 w-[52%] rotate-[-6deg] overflow-hidden rounded-2xl bg-slate-900 shadow-xl ring-4 ring-white/50",
+                  "group absolute left-2 top-4 z-10 w-[52%] rotate-[-6deg] overflow-hidden rounded-2xl bg-white shadow-xl ring-4 ring-white/50",
                   "transition duration-300 ease-out will-change-transform hover:z-20 hover:-translate-y-1 hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.35)]",
                   "sm:left-4 sm:top-6"
                 )}
               >
                 <div className="relative aspect-[9/18] w-full">
                   <Image
-                    src="/images/live-sports.jpg"
-                    alt="Live sports streaming on IPTV"
+                    src="/images/mobile-ui-1.jpg"
+                    alt="Modern streaming app interface on mobile"
                     width={300}
                     height={600}
                     fill
@@ -96,15 +96,15 @@ export function Devices() {
               </div>
               <div
                 className={cn(
-                  "group absolute right-2 top-14 z-[11] w-[52%] rotate-[8deg] overflow-hidden rounded-2xl bg-slate-900 shadow-xl ring-4 ring-white/50",
+                  "group absolute right-2 top-14 z-[11] w-[52%] rotate-[8deg] overflow-hidden rounded-2xl bg-white shadow-xl ring-4 ring-white/50",
                   "transition duration-300 ease-out will-change-transform hover:z-20 hover:-translate-y-1 hover:shadow-[0_25px_50px_-12px_rgba(0,0,0,0.35)]",
                   "sm:right-4 sm:top-16"
                 )}
               >
                 <div className="relative aspect-[9/18] w-full">
                   <Image
-                    src="/images/movies-ui.jpg"
-                    alt="Movies and series streaming interface"
+                    src="/images/mobile-ui-2.jpg"
+                    alt="Clean IPTV mobile app dashboard"
                     width={300}
                     height={600}
                     fill
