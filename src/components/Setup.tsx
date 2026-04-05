@@ -85,10 +85,10 @@ export function Setup() {
                 )}
               >
                 <Image
-                  src="/images/iptv-ui.jpg"
-                  alt="IPTV Smarters app interface"
+                  src="/images/firetv.jpg"
+                  alt="Amazon Fire TV Stick 4K streaming device"
                   fill
-                  className="object-cover object-center transition duration-300 ease-out group-hover:scale-105"
+                  className="rounded-2xl object-cover shadow-xl transition duration-300 ease-out group-hover:scale-105"
                   sizes="(max-width: 1024px) 70vw, 320px"
                 />
               </div>
