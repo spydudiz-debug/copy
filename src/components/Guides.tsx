@@ -34,6 +34,44 @@ const deviceGuides = [
   { label: "Android Box", href: "#setup-guide", type: "android" as const },
 ];
 
+const setupSteps = [
+  {
+    step: 1,
+    title: "Download IPTV App",
+    description: "Install the IPTV app from your device store or using APK.",
+    image: "/images/step1.jpg",
+    alt: "Download IPTV app from app store or APK",
+  },
+  {
+    step: 2,
+    title: "Open the App",
+    description: "Launch the app after installation on your device.",
+    image: "/images/step2.jpg",
+    alt: "Open the IPTV app on your device",
+  },
+  {
+    step: 3,
+    title: "Enter Login Details",
+    description: "Input your username, password, and server URL.",
+    image: "/images/step3.jpg",
+    alt: "Enter IPTV username password and server URL",
+  },
+  {
+    step: 4,
+    title: "Load Channels",
+    description: "Wait for channels and categories to load automatically.",
+    image: "/images/step4.jpg",
+    alt: "IPTV channels and categories loading",
+  },
+  {
+    step: 5,
+    title: "Start Watching",
+    description: "Enjoy live TV, movies, and series without buffering.",
+    image: "/images/step5.jpg",
+    alt: "Watching live TV and on-demand content",
+  },
+] as const;
+
 function DeviceIcon({ type }: { type: "fire" | "tv" | "android" }) {
   if (type === "fire") {
     return (
@@ -110,14 +148,40 @@ export function Guides() {
 
           <div>
             <h2 className="text-[1.375rem] font-bold tracking-tight sm:text-2xl md:text-3xl">
-              Device Setup Guides
+              Step-by-Step Setup Guide
             </h2>
             <p className="mt-3 text-sm font-medium leading-relaxed text-white/70 sm:mt-4 sm:text-[0.9375rem] md:text-base">
               Follow device-specific walkthroughs with screenshots, recommended settings, and tips to get
               the smoothest playback on your hardware.
             </p>
 
-            <div className="mt-6 flex flex-col gap-2.5 sm:mt-8 sm:flex-row sm:flex-wrap sm:gap-3">
+            <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+              {setupSteps.map((s) => (
+                <div
+                  key={s.step}
+                  className="flex flex-col overflow-hidden rounded-2xl bg-white shadow-lg shadow-black/20 ring-1 ring-black/5"
+                >
+                  <div className="relative aspect-[16/10] w-full bg-slate-100">
+                    <Image
+                      src={s.image}
+                      alt={s.alt}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                  </div>
+                  <div className="flex flex-1 flex-col p-4 sm:p-5">
+                    <span className="inline-flex w-fit rounded-full bg-gradient-to-r from-[#a855f7] to-[#6366f1] px-3 py-1 text-xs font-semibold text-white shadow-sm">
+                      Step {s.step}
+                    </span>
+                    <h3 className="mt-1 text-lg font-bold text-[#0f172a]">{s.title}</h3>
+                    <p className="mt-2 text-sm font-medium leading-relaxed text-[#6b7280]">{s.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-8 flex flex-col gap-2.5 sm:mt-10 sm:flex-row sm:flex-wrap sm:gap-3">
               {deviceGuides.map((d) => (
                 <Link
                   key={d.label}
