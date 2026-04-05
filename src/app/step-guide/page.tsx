@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { Footer } from "@/components/Footer";
-import { SCOP_MEDIA_SITE_URL } from "@/lib/constants";
+import { SCOP_MEDIA_SITE_URL, SCOP_MEDIA_STEP_GUIDE_URL } from "@/lib/constants";
 import { Navbar } from "@/components/Navbar";
 import { StepGuideContent } from "@/components/StepGuideContent";
 import { Container } from "@/components/ui/Container";
@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   title: "IPTV Setup Guides — Firestick, Smart TV, Android, PC & Formuler | SCOP",
   description:
     "Step-by-step IPTV setup for Fire TV, Samsung & LG smart TVs, Android boxes, Windows PC, and Formuler (MyTVOnline). Install apps, enter login details, and start streaming.",
+  alternates: {
+    canonical: SCOP_MEDIA_STEP_GUIDE_URL,
+  },
   keywords: [
     "IPTV Firestick setup",
     "how to install IPTV on Fire TV",

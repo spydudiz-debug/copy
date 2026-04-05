@@ -1,4 +1,3 @@
-import { SCOP_MEDIA_SITE_URL } from "@/lib/constants";
 import { deviceSetupGuides } from "@/lib/deviceSetupGuides";
 
 function StepLine({ text }: { text: string }) {
@@ -32,7 +31,7 @@ export function StepGuideContent() {
           {deviceSetupGuides.map((g) => (
             <li key={g.id}>
               <a
-                href={SCOP_MEDIA_SITE_URL}
+                href={`#${g.id}`}
                 className="text-sm font-semibold text-[#6366f1] transition hover:text-[#4f46e5] hover:underline"
               >
                 {g.title}
