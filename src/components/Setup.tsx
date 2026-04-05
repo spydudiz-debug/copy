@@ -80,16 +80,16 @@ export function Setup() {
             <div className="relative rounded-2xl bg-gradient-to-br from-[#14b8a6]/30 to-[#22c1f1]/40 p-6 shadow-xl sm:p-8">
               <div
                 className={cn(
-                  "group relative mx-auto aspect-[9/16] w-full max-w-[260px] overflow-hidden rounded-2xl bg-slate-900 shadow-xl ring-4 ring-white/40",
+                  "group relative mx-auto aspect-square w-full max-w-[260px] overflow-hidden rounded-2xl bg-[#0a1628] shadow-xl ring-4 ring-white/40",
                   "sm:max-w-[280px]"
                 )}
               >
                 <Image
-                  src="/images/firetv.jpg"
+                  src="/images/setup-firetv.jpg"
                   alt="Amazon Fire TV Stick 4K streaming device"
                   fill
-                  className="rounded-2xl object-cover shadow-xl transition duration-300 ease-out group-hover:scale-105"
-                  sizes="(max-width: 1024px) 70vw, 320px"
+                  className="rounded-2xl object-contain object-center p-2 shadow-xl transition duration-300 ease-out group-hover:scale-[1.02]"
+                  sizes="(max-width: 1024px) 70vw, 280px"
                 />
               </div>
             </div>
