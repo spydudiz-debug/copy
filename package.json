@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "git:check": "git status -sb && git remote -v && git log -1 --oneline"
   },
   "dependencies": {
     "clsx": "^2.1.1",

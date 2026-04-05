@@ -1,5 +1,16 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Git: “nothing to commit” / “Everything up-to-date”
+
+That message is **normal** when your edits are already saved, committed, and pushed.
+
+1. **Save all files** in the editor (Ctrl+K S or File → Save All). Unsaved buffers are not on disk, so Git will not see them.
+2. **Open the repo root** in your terminal: the folder that contains `package.json` and `.git` (this project: `copy`).
+3. Check status: `git status` or `npm run git:check`
+4. If you have changes: `git add -A`, `git commit -m "your message"`, `git push origin master`
+
+If you use OneDrive, wait for sync to finish before committing so the files on disk match what you edited.
+
 ## Getting Started
 
 First, run the development server:
