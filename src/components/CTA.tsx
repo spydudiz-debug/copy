@@ -6,7 +6,7 @@ import { IPTV_STORE_URL } from "@/lib/constants";
 export function CTA() {
   return (
     <section className="relative overflow-hidden py-16 sm:py-20 lg:py-24">
-      <div className="pointer-events-none absolute inset-0 bg-[#f8fafc]" aria-hidden />
+      <div className="pointer-events-none absolute inset-0 bg-white" aria-hidden />
       <Container className="relative">
         <div className="cta-box">
           <div className="cta-text">
