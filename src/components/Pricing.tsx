@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 import { cn } from "@/lib/cn";
-import { IPTV_STORE_URL } from "@/lib/constants";
+import { IPTV_STORE_URL, RESELLER_PACKAGES_URL } from "@/lib/constants";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 
@@ -64,6 +64,60 @@ const iptvPlans: {
   },
 ];
 
+const resellerPeriodLines = [
+  "24 Hours Free Trial = 0 Credit",
+  "1 Month = 1 Credits",
+  "3 Month = 2 Credits",
+  "6 Month = 3 Credits",
+  "12 Month = 4 Credits",
+  "(Activation can take up to 24 hours to complete and get you access to your own panel)",
+] as const;
+
+const resellerPlans: {
+  name: string;
+  price: string;
+  credits: number;
+  featured: boolean;
+  buttonClass: string;
+  checkClass: string;
+}[] = [
+  {
+    name: "Basic",
+    price: "£100.00",
+    credits: 16,
+    featured: false,
+    buttonClass:
+      "bg-gradient-to-r from-[#a855f7] to-[#6366f1] shadow-lg shadow-purple-500/30 hover:brightness-110 focus-visible:ring-purple-400/40",
+    checkClass: "text-[#7c3aed]",
+  },
+  {
+    name: "Scop Premium",
+    price: "£200.00",
+    credits: 35,
+    featured: true,
+    buttonClass:
+      "bg-gradient-to-r from-[#a855f7] to-[#6366f1] shadow-lg shadow-purple-500/30 hover:brightness-110 focus-visible:ring-purple-400/40",
+    checkClass: "text-[#7c3aed]",
+  },
+  {
+    name: "GOLD",
+    price: "£300.00",
+    credits: 80,
+    featured: false,
+    buttonClass:
+      "bg-gradient-to-r from-[#a855f7] to-[#6366f1] shadow-lg shadow-purple-500/30 hover:brightness-110 focus-visible:ring-purple-400/40",
+    checkClass: "text-[#7c3aed]",
+  },
+];
+
+function resellerFeatures(credits: number): string[] {
+  return [
+    `Start Make Money This Pack will give you ${credits} credits.`,
+    "You Can't Have Sub-Reseller.",
+    ...resellerPeriodLines,
+  ];
+}
+
 function CheckIcon({ className }: { className?: string }) {
   return (
     <svg className={cn("h-5 w-5 shrink-0", className)} viewBox="0 0 20 20" fill="currentColor" aria-hidden>
@@ -120,52 +174,95 @@ export function Pricing() {
         </div>
 
         <div className="mt-10 grid gap-6 sm:mt-12 sm:gap-8 lg:grid-cols-3 lg:items-stretch">
-          {iptvPlans.map((plan) => (
-            <div
-              key={plan.name}
-              className={cn(
-                "group relative flex flex-col rounded-2xl bg-white p-6 text-center shadow-xl shadow-black/5 ring-1 ring-black/5",
-                "transition duration-300 ease-out will-change-transform",
-                "hover:-translate-y-1 hover:shadow-2xl",
-                "sm:p-8",
-                plan.featured &&
-                  "lg:z-[1] lg:-mt-1 lg:scale-[1.02] lg:shadow-[0_32px_64px_-16px_rgba(168,85,247,0.25)] lg:ring-purple-200/40"
-              )}
-            >
-              {plan.featured && plan.badge ? (
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                  <span className="inline-flex rounded-full bg-gradient-to-r from-[#ff2a7f] to-[#a855f7] px-3.5 py-1 text-[0.6875rem] font-bold uppercase tracking-wide text-white shadow-lg sm:px-4 sm:text-xs">
-                    {plan.badge}
-                  </span>
+          {planType === "iptv"
+            ? iptvPlans.map((plan) => (
+                <div
+                  key={plan.name}
+                  className={cn(
+                    "group relative flex flex-col rounded-2xl bg-white p-6 text-center shadow-xl shadow-black/5 ring-1 ring-black/5",
+                    "transition duration-300 ease-out will-change-transform",
+                    "hover:-translate-y-1 hover:shadow-2xl",
+                    "sm:p-8",
+                    plan.featured &&
+                      "lg:z-[1] lg:-mt-1 lg:scale-[1.02] lg:shadow-[0_32px_64px_-16px_rgba(168,85,247,0.25)] lg:ring-purple-200/40"
+                  )}
+                >
+                  {plan.featured && plan.badge ? (
+                    <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                      <span className="inline-flex rounded-full bg-gradient-to-r from-[#ff2a7f] to-[#a855f7] px-3.5 py-1 text-[0.6875rem] font-bold uppercase tracking-wide text-white shadow-lg sm:px-4 sm:text-xs">
+                        {plan.badge}
+                      </span>
+                    </div>
+                  ) : null}
+
+                  <h3 className="text-base font-bold text-[#0f172a] sm:text-lg">{plan.name}</h3>
+                  <p className="mt-3 text-[2rem] font-bold tracking-tight text-[#0f172a] sm:mt-4 sm:text-4xl">
+                    {plan.price}
+                  </p>
+
+                  <Link
+                    href={IPTV_STORE_URL}
+                    className={cn(
+                      "mt-6 inline-flex h-12 cursor-pointer items-center justify-center rounded-full px-6 text-sm font-semibold text-white",
+                      "transition duration-300 ease-out hover:scale-[1.02] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2",
+                      plan.buttonClass
+                    )}
+                  >
+                    Subscribe Now
+                  </Link>
+
+                  <ul className="mt-6 flex flex-col gap-2.5 text-left sm:mt-8 sm:gap-3">
+                    {plan.features.map((f) => (
+                      <li key={f} className="flex items-start gap-3 text-sm font-medium leading-snug text-[#0f172a]">
+                        <CheckIcon className={plan.checkClass} />
+                        <span>{f}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              ) : null}
+              ))
+            : resellerPlans.map((plan) => (
+                <div
+                  key={plan.name}
+                  className={cn(
+                    "group relative flex flex-col rounded-2xl bg-white p-6 text-center shadow-xl shadow-black/5 ring-1 ring-black/5",
+                    "transition duration-300 ease-out will-change-transform",
+                    "hover:-translate-y-1 hover:shadow-2xl",
+                    "sm:p-8",
+                    plan.featured &&
+                      "lg:z-[1] lg:-mt-1 lg:scale-[1.02] lg:shadow-[0_32px_64px_-16px_rgba(168,85,247,0.25)] lg:ring-purple-200/40"
+                  )}
+                >
+                  <h3 className="text-base font-bold text-[#0f172a] sm:text-lg">{plan.name}</h3>
+                  <p className="mt-3 text-[2rem] font-bold tracking-tight text-[#0f172a] sm:mt-4 sm:text-4xl">
+                    {plan.price}{" "}
+                    <span className="text-xl font-semibold tracking-tight text-[#64748b] sm:text-2xl">GBP</span>
+                  </p>
+                  <p className="mt-2 text-sm font-semibold text-[#0f172a] sm:text-base">
+                    Credits: {plan.credits}
+                  </p>
 
-              <h3 className="text-base font-bold text-[#0f172a] sm:text-lg">{plan.name}</h3>
-              <p className="mt-3 text-[2rem] font-bold tracking-tight text-[#0f172a] sm:mt-4 sm:text-4xl">
-                {plan.price}
-              </p>
+                  <Link
+                    href={RESELLER_PACKAGES_URL}
+                    className={cn(
+                      "mt-6 inline-flex h-12 cursor-pointer items-center justify-center rounded-full px-6 text-sm font-semibold text-white",
+                      "transition duration-300 ease-out hover:scale-[1.02] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2",
+                      plan.buttonClass
+                    )}
+                  >
+                    Order Now
+                  </Link>
 
-              <Link
-                href={IPTV_STORE_URL}
-                className={cn(
-                  "mt-6 inline-flex h-12 cursor-pointer items-center justify-center rounded-full px-6 text-sm font-semibold text-white",
-                  "transition duration-300 ease-out hover:scale-[1.02] active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2",
-                  plan.buttonClass
-                )}
-              >
-                Subscribe Now
-              </Link>
-
-              <ul className="mt-6 flex flex-col gap-2.5 text-left sm:mt-8 sm:gap-3">
-                {plan.features.map((f) => (
-                  <li key={f} className="flex items-start gap-3 text-sm font-medium leading-snug text-[#0f172a]">
-                    <CheckIcon className={plan.checkClass} />
-                    <span>{f}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+                  <ul className="mt-6 flex flex-col gap-2.5 text-left sm:mt-8 sm:gap-3">
+                    {resellerFeatures(plan.credits).map((f) => (
+                      <li key={f} className="flex items-start gap-3 text-sm font-medium leading-snug text-[#0f172a]">
+                        <CheckIcon className={plan.checkClass} />
+                        <span>{f}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
         </div>
       </Container>
     </Section>
