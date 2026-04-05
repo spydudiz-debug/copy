@@ -1,7 +1,6 @@
 import Image from "next/image";
 
 import { cn } from "@/lib/cn";
-import { SetupStepsGrid } from "@/components/SetupStepsGrid";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 
@@ -96,8 +95,6 @@ export function Setup() {
             </div>
           </div>
         </div>
-
-        <SetupStepsGrid showTopBorder />
       </Container>
     </Section>
   );

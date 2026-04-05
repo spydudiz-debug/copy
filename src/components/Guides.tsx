@@ -29,9 +29,9 @@ const guidePosts = [
 ] as const;
 
 const deviceGuides = [
-  { label: "Firestick", href: "/step-guide", type: "fire" as const },
-  { label: "Smart TV", href: "/step-guide", type: "tv" as const },
-  { label: "Android Box", href: "/step-guide", type: "android" as const },
+  { label: "Firestick", href: "#setup-guide", type: "fire" as const },
+  { label: "Smart TV", href: "#setup-guide", type: "tv" as const },
+  { label: "Android Box", href: "#setup-guide", type: "android" as const },
 ];
 
 function DeviceIcon({ type }: { type: "fire" | "tv" | "android" }) {
@@ -114,11 +114,11 @@ export function Guides() {
             </h2>
             <p className="mt-3 text-sm font-medium leading-relaxed text-white/70 sm:mt-4 sm:text-[0.9375rem] md:text-base">
               Follow device-specific walkthroughs with screenshots, recommended settings, and tips to get
-              the smoothest playback on your hardware. Use the{" "}
-              <Link href="/step-guide" className="font-semibold text-[#22c1f1] underline-offset-2 hover:underline">
-                Step-by-Step Setup Guide
+              the smoothest playback on your hardware. See the{" "}
+              <Link href="#setup-guide" className="font-semibold text-[#22c1f1] underline-offset-2 hover:underline">
+                setup section
               </Link>{" "}
-              for the full walkthrough.
+              for device-specific tips.
             </p>
 
             <div className="mt-8 flex flex-col gap-2.5 sm:mt-10 sm:flex-row sm:flex-wrap sm:gap-3">
