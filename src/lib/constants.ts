@@ -1,11 +1,8 @@
-/** Primary site URL used for setup guide and marketing links */
+/** Primary site URL for store and external marketing links */
 export const SCOP_MEDIA_SITE_URL = "https://scopmedia.com" as const;
 
-/**
- * Full URL to the IPTV setup guides page. Deploy this app’s `/step-guide` route at this path on
- * scopmedia.com so nav links show the same guides on the live site.
- */
-export const SCOP_MEDIA_STEP_GUIDE_URL = `${SCOP_MEDIA_SITE_URL}/step-guide` as const;
+/** In-app path for IPTV setup guides (same site, not external redirect) */
+export const STEP_GUIDE_PATH = "/step-guide" as const;
 
 export const IPTV_STORE_URL =
   "https://scopmedia.com/index.php?rp=/store/iptv-subscriptions" as const;

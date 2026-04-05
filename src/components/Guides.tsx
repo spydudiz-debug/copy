@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { cn } from "@/lib/cn";
-import { SCOP_MEDIA_STEP_GUIDE_URL } from "@/lib/constants";
+import { STEP_GUIDE_PATH } from "@/lib/constants";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 
@@ -32,17 +32,17 @@ const guidePosts = [
 const deviceGuides = [
   {
     label: "Firestick",
-    href: `${SCOP_MEDIA_STEP_GUIDE_URL}#amazon-firestick-fire-tv`,
+    href: `${STEP_GUIDE_PATH}#amazon-firestick-fire-tv`,
     type: "fire" as const,
   },
   {
     label: "Smart TV",
-    href: `${SCOP_MEDIA_STEP_GUIDE_URL}#smart-tv-samsung-lg-sony`,
+    href: `${STEP_GUIDE_PATH}#smart-tv-samsung-lg-sony`,
     type: "tv" as const,
   },
   {
     label: "Android Box",
-    href: `${SCOP_MEDIA_STEP_GUIDE_URL}#android-box-tv-box`,
+    href: `${STEP_GUIDE_PATH}#android-box-tv-box`,
     type: "android" as const,
   },
 ];
@@ -128,7 +128,7 @@ export function Guides() {
             <p className="mt-3 text-sm font-medium leading-relaxed text-white/70 sm:mt-4 sm:text-[0.9375rem] md:text-base">
               Follow device-specific walkthroughs with screenshots, recommended settings, and tips to get
               the smoothest playback on your hardware. Open our full{" "}
-              <Link href={SCOP_MEDIA_STEP_GUIDE_URL} className="font-semibold text-[#22c1f1] underline-offset-2 hover:underline">
+              <Link href={STEP_GUIDE_PATH} className="font-semibold text-[#22c1f1] underline-offset-2 hover:underline">
                 IPTV setup guides
               </Link>{" "}
               for Fire TV, Smart TV, Android, PC, and Formuler.

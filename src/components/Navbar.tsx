@@ -5,11 +5,11 @@ import { useEffect, useState } from "react";
 
 import { cn } from "@/lib/cn";
 import { Container } from "@/components/ui/Container";
-import { IPTV_STORE_URL, SCOP_MEDIA_STEP_GUIDE_URL } from "@/lib/constants";
+import { IPTV_STORE_URL, STEP_GUIDE_PATH } from "@/lib/constants";
 
 const links = [
   { href: IPTV_STORE_URL, label: "IPTV Subscription" },
-  { href: SCOP_MEDIA_STEP_GUIDE_URL, label: "Setup Guide" },
+  { href: STEP_GUIDE_PATH, label: "Setup Guide" },
   { href: "#blog", label: "Blog" },
   { href: "#contact", label: "Contact" },
 ] as const;

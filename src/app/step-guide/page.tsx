@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 import { Footer } from "@/components/Footer";
-import { SCOP_MEDIA_SITE_URL, SCOP_MEDIA_STEP_GUIDE_URL } from "@/lib/constants";
 import { Navbar } from "@/components/Navbar";
 import { StepGuideContent } from "@/components/StepGuideContent";
 import { Container } from "@/components/ui/Container";
@@ -13,7 +12,7 @@ export const metadata: Metadata = {
   description:
     "Step-by-step IPTV setup for Fire TV, Samsung & LG smart TVs, Android boxes, Windows PC, and Formuler (MyTVOnline). Install apps, enter login details, and start streaming.",
   alternates: {
-    canonical: SCOP_MEDIA_STEP_GUIDE_URL,
+    canonical: "/step-guide",
   },
   keywords: [
     "IPTV Firestick setup",
@@ -37,7 +36,7 @@ export default function StepGuidePage() {
         <Section className="bg-[#f5f5f7] pb-16 pt-8 sm:pb-20 sm:pt-10 md:pt-12">
           <Container>
             <nav className="mb-8 text-sm font-medium text-[#64748b] sm:mb-10" aria-label="Breadcrumb">
-              <Link href={SCOP_MEDIA_SITE_URL} className="text-[#6366f1] transition hover:text-[#4f46e5]">
+              <Link href="/" className="text-[#6366f1] transition hover:text-[#4f46e5]">
                 Home
               </Link>
               <span className="mx-2 text-[#cbd5e1]">/</span>
