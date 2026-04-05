@@ -4,7 +4,9 @@ Each `.md` file is one article with YAML frontmatter (`title`, `description`, `k
 
 **Manifest:** see `manifest.json` for all planned keywords and URL slugs.
 
-## Completed in repo (batch 1)
+## Completed in repo
+
+### Batch 1
 
 | File | Keyword |
 |------|---------|
@@ -15,6 +17,15 @@ Each `.md` file is one article with YAML frontmatter (`title`, `description`, `k
 | `iptv-playlist.md` | IPTV playlist |
 | `iptv-m3u8.md` | IPTV m3u8 |
 
-**Remaining keywords:** ~100+ (see `manifest.json`). Ask to continue generation in batches (e.g. “blog batch 2: next 15 slugs”) so each post stays unique and within word count.
+### Batch 2 (added)
+
+| File | Keyword |
+|------|---------|
+| `iptv-links.md` | IPTV links |
+| `live-tv-iptv.md` | Live TV IPTV |
+| `iptv-channels-list.md` | IPTV channels list |
+| `iptv-subscription.md` | IPTV subscription |
+
+**Remaining keywords:** see `manifest.json` (~90+). Request **“blog content batch 3”** to continue—full list is large for a single generation pass.
 
 **Live route:** Posts are listed at **`/blog`** and each file is available at **`/blog/{slug}`** (see `src/lib/blog.ts` and `src/app/blog/`).
