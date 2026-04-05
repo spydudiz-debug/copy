@@ -82,7 +82,7 @@ export function Footer() {
                 ] as const
               ).map(([label]) => (
                 <li key={label}>
-                  <Link href="#setup-guide" className="transition duration-300 hover:text-white">
+                  <Link href="/step-guide" className="transition duration-300 hover:text-white">
                     {label}
                   </Link>
                 </li>
