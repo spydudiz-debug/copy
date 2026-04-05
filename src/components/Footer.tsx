@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import { cn } from "@/lib/cn";
+import { SCOP_MEDIA_SITE_URL } from "@/lib/constants";
 import { Container } from "@/components/ui/Container";
 
 export function Footer() {
@@ -75,11 +76,11 @@ export function Footer() {
             <ul className="mt-3 flex flex-col gap-2 text-sm font-medium text-white/70 sm:mt-4">
               {(
                 [
-                  ["Firestick", "/step-guide#amazon-firestick-fire-tv"],
-                  ["Smart TV", "/step-guide#smart-tv-samsung-lg-sony"],
-                  ["Android Box", "/step-guide#android-box-tv-box"],
-                  ["Windows PC", "/step-guide#windows-pc"],
-                  ["Formuler", "/step-guide#formuler-device"],
+                  ["Firestick", SCOP_MEDIA_SITE_URL],
+                  ["Smart TV", SCOP_MEDIA_SITE_URL],
+                  ["Android Box", SCOP_MEDIA_SITE_URL],
+                  ["Windows PC", SCOP_MEDIA_SITE_URL],
+                  ["Formuler", SCOP_MEDIA_SITE_URL],
                 ] as const
               ).map(([label, href]) => (
                 <li key={label}>

@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { cn } from "@/lib/cn";
+import { SCOP_MEDIA_SITE_URL } from "@/lib/constants";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 
@@ -115,7 +116,7 @@ export function Guides() {
             <p className="mt-3 text-sm font-medium leading-relaxed text-white/70 sm:mt-4 sm:text-[0.9375rem] md:text-base">
               Follow device-specific walkthroughs with screenshots, recommended settings, and tips to get
               the smoothest playback on your hardware. Open our full{" "}
-              <Link href="/step-guide" className="font-semibold text-[#22c1f1] underline-offset-2 hover:underline">
+              <Link href={SCOP_MEDIA_SITE_URL} className="font-semibold text-[#22c1f1] underline-offset-2 hover:underline">
                 IPTV setup guides
               </Link>{" "}
               for Fire TV, Smart TV, Android, PC, and Formuler.
