@@ -72,7 +72,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="text-xs font-bold uppercase tracking-[0.14em] text-white/90">Setup Guide</h3>
+            <h3 className="text-xs font-bold uppercase tracking-[0.14em] text-white/90">Setup Guides</h3>
             <ul className="mt-3 flex flex-col gap-2 text-sm font-medium text-white/70 sm:mt-4">
               {(
                 [
