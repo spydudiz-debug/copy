@@ -55,10 +55,10 @@ export function Features() {
                 )}
               >
                 <Image
-                  src="/images/iptv-ui.jpg"
-                  alt="IPTV Smarters app interface"
+                  src="/images/tv-watching.jpg"
+                  alt="Couple watching TV comfortably at home"
                   fill
-                  className="object-cover object-center transition duration-300 ease-out group-hover:scale-105"
+                  className="rounded-2xl object-cover shadow-xl transition duration-300 ease-out group-hover:scale-105"
                   sizes="(max-width: 1024px) 90vw, 40vw"
                 />
                 <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/25 to-transparent" />
