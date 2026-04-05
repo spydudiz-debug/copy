@@ -82,15 +82,15 @@ export function Devices() {
                   "sm:left-4 sm:top-6"
                 )}
               >
-                <div className="relative aspect-[9/18] w-full">
+                <div className="relative aspect-[9/16] w-full overflow-hidden rounded-2xl">
                   <Image
                     src="/images/mobile-ui-1.jpg"
                     alt="Modern streaming app interface on mobile"
                     width={300}
                     height={600}
                     fill
-                    className="rounded-2xl object-cover object-center shadow-xl transition duration-300 ease-out group-hover:scale-105"
-                    sizes="(max-width: 1024px) 45vw, 200px"
+                    className="object-cover object-[50%_50%] shadow-xl transition duration-300 ease-out will-change-transform scale-[1.42] group-hover:scale-[1.5]"
+                    sizes="(max-width: 1024px) 45vw, 220px"
                   />
                 </div>
               </div>
@@ -101,15 +101,15 @@ export function Devices() {
                   "sm:right-4 sm:top-16"
                 )}
               >
-                <div className="relative aspect-[9/18] w-full">
+                <div className="relative aspect-[9/16] w-full overflow-hidden rounded-2xl">
                   <Image
                     src="/images/mobile-ui-2.jpg"
                     alt="Clean IPTV mobile app dashboard"
                     width={300}
                     height={600}
                     fill
-                    className="rounded-2xl object-cover object-center shadow-xl transition duration-300 ease-out group-hover:scale-105"
-                    sizes="(max-width: 1024px) 45vw, 200px"
+                    className="object-cover object-[56%_48%] shadow-xl transition duration-300 ease-out will-change-transform scale-[1.46] group-hover:scale-[1.54]"
+                    sizes="(max-width: 1024px) 45vw, 220px"
                   />
                 </div>
               </div>
