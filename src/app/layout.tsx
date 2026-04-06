@@ -12,6 +12,14 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL(CANONICAL_SITE_ORIGIN),
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
   title: "SCOP — Best IPTV Provider",
   description:
     "Premium IPTV subscription with no buffering, HD & 4K streaming, and global datacenters. Trusted by 5,000+ customers.",
