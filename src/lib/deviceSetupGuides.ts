@@ -103,3 +103,9 @@ export const deviceSetupGuides: readonly DeviceGuide[] = [
     ],
   },
 ] as const;
+
+export function getDeviceGuideBySlug(slug: string): DeviceGuide | undefined {
+  return deviceSetupGuides.find((g) => g.id === slug);
+}
+
+export const setupGuideSlugs: string[] = deviceSetupGuides.map((g) => g.id);

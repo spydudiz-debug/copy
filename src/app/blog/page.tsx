@@ -1,24 +1,48 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 
 import { BlogList } from "@/components/blog/BlogList";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 import { getAllPosts } from "@/lib/blog";
+import { BLOG_POSTS_PER_PAGE } from "@/lib/blog-constants";
+import { BLOG_PATH } from "@/lib/constants";
 import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 
-export const metadata: Metadata = {
-  title: "IPTV Blog — Guides, Tips & Streaming Insights | SCOP",
-  description:
-    "Read SCOP Media’s IPTV blog: setup tips, streaming quality, subscriptions, and device guides in plain English.",
-  alternates: { canonical: "/blog" },
+type Props = {
+  searchParams: Promise<{ page?: string }>;
 };
 
-export default async function BlogPage() {
+function clampBlogPage(raw: string | undefined, totalPages: number): number {
+  const n = parseInt(raw ?? "1", 10);
+  if (!Number.isFinite(n) || n < 1) return 1;
+  return Math.min(n, totalPages);
+}
+
+export async function generateMetadata({ searchParams }: Props): Promise<Metadata> {
   const posts = getAllPosts();
+  const totalPages = Math.max(1, Math.ceil(posts.length / BLOG_POSTS_PER_PAGE));
+  const params = await searchParams;
+  const page = clampBlogPage(params.page, totalPages);
+  const canonical = page <= 1 ? BLOG_PATH : `${BLOG_PATH}?page=${page}`;
+
+  return {
+    title: "IPTV Blog — Guides, Tips & Streaming Insights | SCOP",
+    description:
+      "Read SCOP Media’s IPTV blog: setup tips, streaming quality, subscriptions, and device guides in plain English.",
+    alternates: { canonical },
+  };
+}
+
+export default async function BlogPage({ searchParams }: Props) {
+  const posts = getAllPosts();
+  const totalPages = Math.max(1, Math.ceil(posts.length / BLOG_POSTS_PER_PAGE));
+  const params = await searchParams;
+  const page = clampBlogPage(params.page, totalPages);
 
   if (process.env.NODE_ENV === "development") {
-    console.log("[blog/page] rendering with", posts.length, "posts");
+    console.log("[blog/page] rendering with", posts.length, "posts, page", page);
   }
 
   return (
@@ -35,7 +59,15 @@ export default async function BlogPage() {
             </header>
 
             <div className="mx-auto mt-12 max-w-6xl sm:mt-14">
-              <BlogList posts={posts} />
+              <Suspense
+                fallback={
+                  <p className="rounded-2xl border border-[#e2e8f0] bg-white px-6 py-12 text-center text-[#64748b]">
+                    Loading articles…
+                  </p>
+                }
+              >
+                <BlogList posts={posts} initialPage={page} />
+              </Suspense>
             </div>
           </Container>
         </Section>

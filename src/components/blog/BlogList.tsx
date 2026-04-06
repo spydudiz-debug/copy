@@ -2,7 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useCallback, useEffect, useMemo, useState } from "react";
 
 import type { BlogPostListItem } from "@/lib/blog";
 import { BLOG_IMAGE_FALLBACK, BLOG_POSTS_PER_PAGE } from "@/lib/blog-constants";
@@ -12,6 +13,8 @@ import { cn } from "@/lib/cn";
 type BlogListProps = {
   posts: BlogPostListItem[];
   className?: string;
+  /** Server-parsed page from `/blog?page=` (must stay in sync with URL). */
+  initialPage?: number;
 };
 
 function buildPageList(totalPages: number, current: number): (number | "ellipsis")[] {
@@ -73,16 +76,51 @@ function BlogCardImage({
   );
 }
 
-export function BlogList({ posts, className }: BlogListProps) {
-  const [currentPage, setCurrentPage] = useState(1);
+function clampPage(p: number, totalPages: number) {
+  if (!Number.isFinite(p) || p < 1) return 1;
+  return Math.min(p, totalPages);
+}
+
+export function BlogList({ posts, className, initialPage = 1 }: BlogListProps) {
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
 
   const totalPages = Math.max(1, Math.ceil(posts.length / BLOG_POSTS_PER_PAGE));
+
+  const pageFromQuery = useMemo(() => {
+    const raw = searchParams.get("page");
+    const n = parseInt(raw ?? String(initialPage), 10);
+    return clampPage(n, totalPages);
+  }, [searchParams, initialPage, totalPages]);
+
+  const [currentPage, setCurrentPage] = useState(() => clampPage(initialPage, totalPages));
+
+  useEffect(() => {
+    setCurrentPage(clampPage(pageFromQuery, totalPages));
+  }, [pageFromQuery, totalPages]);
 
   useEffect(() => {
     if (currentPage > totalPages) {
       setCurrentPage(totalPages);
     }
   }, [currentPage, totalPages]);
+
+  const goToPage = useCallback(
+    (p: number) => {
+      const next = clampPage(p, totalPages);
+      setCurrentPage(next);
+      const q = new URLSearchParams(searchParams.toString());
+      if (next <= 1) {
+        q.delete("page");
+      } else {
+        q.set("page", String(next));
+      }
+      const qs = q.toString();
+      router.replace(qs ? `${pathname}?${qs}` : pathname, { scroll: false });
+    },
+    [pathname, router, searchParams, totalPages],
+  );
 
   const currentPosts = useMemo(() => {
     const last = currentPage * BLOG_POSTS_PER_PAGE;
@@ -143,7 +181,7 @@ export function BlogList({ posts, className }: BlogListProps) {
         >
           <button
             type="button"
-            onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
+            onClick={() => goToPage(currentPage - 1)}
             disabled={currentPage === 1}
             className={cn(
               "min-h-11 min-w-[5.5rem] rounded-full border px-4 text-sm font-semibold transition",
@@ -169,7 +207,7 @@ export function BlogList({ posts, className }: BlogListProps) {
                 <button
                   key={item}
                   type="button"
-                  onClick={() => setCurrentPage(item)}
+                  onClick={() => goToPage(item)}
                   className={cn(
                     "flex h-11 min-w-[2.75rem] items-center justify-center rounded-full px-3.5 text-sm font-semibold transition",
                     currentPage === item
@@ -186,7 +224,7 @@ export function BlogList({ posts, className }: BlogListProps) {
 
           <button
             type="button"
-            onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
+            onClick={() => goToPage(currentPage + 1)}
             disabled={currentPage === totalPages}
             className={cn(
               "min-h-11 min-w-[5.5rem] rounded-full border px-4 text-sm font-semibold transition",

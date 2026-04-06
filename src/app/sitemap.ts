@@ -1,63 +1,62 @@
-import fs from "node:fs";
-import path from "node:path";
-
 import type { MetadataRoute } from "next";
 
-import { getPostSlugs } from "@/lib/blog";
+import { POSTS_PER_PAGE } from "@/components/blog-pagination";
+import { blogData } from "@/lib/blog-data";
 import { BLOG_PATH } from "@/lib/constants";
-import { getSeoKeywordSlugs } from "@/lib/seo-pages";
-import { getSiteUrl } from "@/lib/site-url";
+import { keywordSlugs } from "@/lib/keyword-pages";
+import { setupGuideSlugs } from "@/lib/deviceSetupGuides";
+import { SITE_URL } from "@/lib/site-config";
 
-const BLOG_DIR = path.join(process.cwd(), "content/blog");
-
-function blogLastModified(slug: string): Date | undefined {
-  try {
-    const filePath = path.join(BLOG_DIR, `${slug}.md`);
-    if (!fs.existsSync(filePath)) return undefined;
-    return fs.statSync(filePath).mtime;
-  } catch {
-    return undefined;
-  }
-}
+const RESERVED_SLUGS = ["blog", "step-guide", "setup", "api"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = getSiteUrl();
-  const now = new Date();
+  const lastMod = new Date();
+  const postCount = Object.keys(blogData).length;
+  const totalBlogPages = Math.max(1, Math.ceil(postCount / POSTS_PER_PAGE));
 
-  const staticEntries: MetadataRoute.Sitemap = [
+  const blogListingPages: MetadataRoute.Sitemap = [];
+  for (let p = 1; p <= totalBlogPages; p++) {
+    blogListingPages.push({
+      url: p === 1 ? `${SITE_URL}${BLOG_PATH}` : `${SITE_URL}${BLOG_PATH}?page=${p}`,
+      lastModified: lastMod,
+      changeFrequency: "weekly" as const,
+      priority: p === 1 ? 0.9 : 0.85,
+    });
+  }
+
+  const staticPages: MetadataRoute.Sitemap = [
+    { url: SITE_URL, lastModified: lastMod, changeFrequency: "weekly", priority: 1 },
+    { url: `${SITE_URL}${BLOG_PATH}`, lastModified: lastMod, changeFrequency: "weekly", priority: 0.9 },
     {
-      url: `${base}/`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 1,
-    },
-    {
-      url: `${base}${BLOG_PATH}`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${base}/step-guide`,
-      lastModified: now,
+      url: `${SITE_URL}/step-guide`,
+      lastModified: lastMod,
       changeFrequency: "monthly",
-      priority: 0.85,
+      priority: 0.9,
     },
   ];
 
-  const keywordEntries: MetadataRoute.Sitemap = getSeoKeywordSlugs().map((slug) => ({
-    url: `${base}/${slug}`,
-    lastModified: now,
+  const blogPages: MetadataRoute.Sitemap = Object.keys(blogData).map((slug) => ({
+    url: `${SITE_URL}${BLOG_PATH}/${slug}`,
+    lastModified: lastMod,
     changeFrequency: "monthly" as const,
     priority: 0.8,
   }));
 
-  const blogEntries: MetadataRoute.Sitemap = getPostSlugs().map((slug) => ({
-    url: `${base}${BLOG_PATH}/${slug}`,
-    lastModified: blogLastModified(slug) ?? now,
+  const setupPages: MetadataRoute.Sitemap = setupGuideSlugs.map((slug) => ({
+    url: `${SITE_URL}/step-guide/${slug}`,
+    lastModified: lastMod,
     changeFrequency: "monthly" as const,
-    priority: 0.7,
+    priority: 0.8,
   }));
 
-  return [...staticEntries, ...keywordEntries, ...blogEntries];
+  const keywordPages: MetadataRoute.Sitemap = keywordSlugs
+    .filter((slug) => !RESERVED_SLUGS.includes(slug))
+    .map((slug) => ({
+      url: `${SITE_URL}/${slug}`,
+      lastModified: lastMod,
+      changeFrequency: "weekly" as const,
+      priority: 0.85,
+    }));
+
+  return [...staticPages, ...blogListingPages.slice(1), ...keywordPages, ...blogPages, ...setupPages];
 }

@@ -1,8 +1,8 @@
-import { SCOP_MEDIA_SITE_URL } from "./constants";
+import { CANONICAL_SITE_ORIGIN } from "./constants";
 
 /**
- * Canonical site origin for sitemaps, robots, and absolute URLs.
- * Prefer `NEXT_PUBLIC_SITE_URL` when the live domain differs from the default.
+ * Live site origin for sitemaps and robots.
+ * Override with `NEXT_PUBLIC_SITE_URL` when staging or splitting environments.
  */
 export function getSiteUrl(): string {
   const fromEnv = process.env.NEXT_PUBLIC_SITE_URL?.trim();
@@ -12,5 +12,5 @@ export function getSiteUrl(): string {
     const host = vercel.replace(/^https?:\/\//, "").replace(/\/$/, "");
     return `https://${host}`;
   }
-  return SCOP_MEDIA_SITE_URL.replace(/\/$/, "");
+  return CANONICAL_SITE_ORIGIN.replace(/\/$/, "");
 }

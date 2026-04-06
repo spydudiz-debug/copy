@@ -1,4 +1,7 @@
-/** Primary site URL for store and external marketing links */
+/** Canonical origin for this domain (sitemap, robots, metadataBase, absolute SEO URLs) */
+export const CANONICAL_SITE_ORIGIN = "https://iptvuk-tv.com" as const;
+
+/** Billing / store host (may differ from the marketing site) */
 export const SCOP_MEDIA_SITE_URL = "https://scopmedia.com" as const;
 
 /** In-app path for IPTV setup guides (same site, not external redirect) */
