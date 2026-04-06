@@ -71,6 +71,10 @@ export default async function BlogPostPage({ params }: Props) {
                   fill
                   className="object-cover"
                   priority
+                  unoptimized={
+                    post.featuredImage.startsWith("http://") ||
+                    post.featuredImage.startsWith("https://")
+                  }
                   sizes="(max-width: 768px) 100vw, 720px"
                 />
               </div>
@@ -83,9 +87,17 @@ export default async function BlogPostPage({ params }: Props) {
                   img: ({ src, alt }) => {
                     const url = typeof src === "string" ? src : "";
                     if (!url) return null;
+                    const remote = url.startsWith("http://") || url.startsWith("https://");
                     return (
                       <span className="relative my-8 block aspect-[16/9] w-full overflow-hidden rounded-xl bg-[#e2e8f0]">
-                        <Image src={url} alt={alt || ""} fill className="object-cover" sizes="(max-width: 768px) 100vw, 720px" />
+                        <Image
+                          src={url}
+                          alt={alt || ""}
+                          fill
+                          unoptimized={remote}
+                          className="object-cover"
+                          sizes="(max-width: 768px) 100vw, 720px"
+                        />
                       </span>
                     );
                   },
