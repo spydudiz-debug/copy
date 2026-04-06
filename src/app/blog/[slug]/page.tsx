@@ -21,8 +21,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const post = getPostBySlug(slug);
   if (!post) return { title: "Post not found" };
+  const docTitle = post.metaTitle
+    ? post.metaTitle
+    : `${post.title.length > 45 ? `${post.title.slice(0, 42)}…` : post.title} | SCOP Blog`;
+
   return {
-    title: `${post.title} | SCOP Blog`,
+    title: docTitle,
     description: post.description,
     alternates: { canonical: `${BLOG_PATH}/${slug}` },
   };

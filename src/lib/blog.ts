@@ -16,6 +16,8 @@ export type BlogPostListItem = {
 
 export type BlogPostDetail = BlogPostListItem & {
   content: string;
+  /** Optional ≤60 char browser title from frontmatter `metaTitle` */
+  metaTitle?: string;
 };
 
 function extractFirstMarkdownImage(md: string): { url: string | null; alt: string } {
@@ -87,6 +89,8 @@ export function getPostBySlug(slug: string): BlogPostDetail | null {
   const title = String(data.title ?? slug);
   const description = String(data.description ?? "");
   const keyword = String(data.keyword ?? "");
+  const metaTitleRaw = data.metaTitle != null ? String(data.metaTitle).trim() : "";
+  const metaTitle = metaTitleRaw ? metaTitleRaw.slice(0, 60) : undefined;
   const { url, alt } = extractFirstMarkdownImage(content);
   const safeUrl = isSafeRemoteImageUrl(url) ? url : null;
 
@@ -97,6 +101,7 @@ export function getPostBySlug(slug: string): BlogPostDetail | null {
     keyword,
     featuredImage: safeUrl,
     featuredImageAlt: alt || title,
+    metaTitle,
     content,
   };
 }
