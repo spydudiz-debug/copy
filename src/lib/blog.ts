@@ -3,6 +3,8 @@ import path from "node:path";
 
 import matter from "gray-matter";
 
+import { resolveBlogFeaturedImage } from "./blog-card-images";
+
 const BLOG_DIR = path.join(process.cwd(), "content/blog");
 
 export type BlogPostListItem = {
@@ -19,12 +21,6 @@ export type BlogPostDetail = BlogPostListItem & {
   /** Optional browser title from frontmatter `metaTitle` (SEO; typically ≤70 visible chars) */
   metaTitle?: string;
 };
-
-function extractFirstMarkdownImage(md: string): { url: string | null; alt: string } {
-  const m = md.match(/!\[([^\]]*)\]\(([^)]+)\)/);
-  if (!m) return { url: null, alt: "" };
-  return { url: m[2].trim(), alt: m[1]?.trim() || "" };
-}
 
 /** Accept only http(s) URLs for remote images — avoids broken relative paths in markdown */
 export function isSafeRemoteImageUrl(url: string | null): url is string {
@@ -57,8 +53,17 @@ export function getAllPosts(): BlogPostListItem[] {
     const title = String(data.title ?? slug);
     const description = String(data.description ?? "");
     const keyword = String(data.keyword ?? "");
-    const { url, alt } = extractFirstMarkdownImage(content);
-    const safeUrl = isSafeRemoteImageUrl(url) ? url : null;
+    const override =
+      data.featuredImage != null && String(data.featuredImage).trim() !== ""
+        ? String(data.featuredImage).trim()
+        : null;
+    const themed = resolveBlogFeaturedImage(slug, keyword);
+    const safeUrl =
+      override && isSafeRemoteImageUrl(override) ? override : themed.url;
+    const featuredAlt =
+      override && isSafeRemoteImageUrl(override)
+        ? String(data.featuredImageAlt ?? title)
+        : themed.alt;
 
     posts.push({
       slug,
@@ -66,7 +71,7 @@ export function getAllPosts(): BlogPostListItem[] {
       description,
       keyword,
       featuredImage: safeUrl,
-      featuredImageAlt: alt || title,
+      featuredImageAlt: featuredAlt || title,
     });
   }
 
@@ -91,8 +96,17 @@ export function getPostBySlug(slug: string): BlogPostDetail | null {
   const keyword = String(data.keyword ?? "");
   const metaTitleRaw = data.metaTitle != null ? String(data.metaTitle).trim() : "";
   const metaTitle = metaTitleRaw ? metaTitleRaw.slice(0, 120) : undefined;
-  const { url, alt } = extractFirstMarkdownImage(content);
-  const safeUrl = isSafeRemoteImageUrl(url) ? url : null;
+  const override =
+    data.featuredImage != null && String(data.featuredImage).trim() !== ""
+      ? String(data.featuredImage).trim()
+      : null;
+  const themed = resolveBlogFeaturedImage(slug, keyword);
+  const safeUrl =
+    override && isSafeRemoteImageUrl(override) ? override : themed.url;
+  const featuredAlt =
+    override && isSafeRemoteImageUrl(override)
+      ? String(data.featuredImageAlt ?? title)
+      : themed.alt;
 
   return {
     slug,
@@ -100,7 +114,7 @@ export function getPostBySlug(slug: string): BlogPostDetail | null {
     description,
     keyword,
     featuredImage: safeUrl,
-    featuredImageAlt: alt || title,
+    featuredImageAlt: featuredAlt || title,
     metaTitle,
     content,
   };

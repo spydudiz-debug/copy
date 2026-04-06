@@ -81,15 +81,6 @@ export function BlogList({ posts, className }: BlogListProps) {
     }
   }, [currentPage, totalPages]);
 
-  useEffect(() => {
-    console.log("[BlogList] posts:", posts.length, posts);
-    posts.forEach((p) => {
-      if (!p.featuredImage) {
-        console.log("[BlogList] no remote image for slug:", p.slug, "— using fallback");
-      }
-    });
-  }, [posts]);
-
   const currentPosts = useMemo(() => {
     const last = currentPage * BLOG_POSTS_PER_PAGE;
     const first = last - BLOG_POSTS_PER_PAGE;
