@@ -1,62 +1,87 @@
 import type { MetadataRoute } from "next";
 
-import { POSTS_PER_PAGE } from "@/components/blog-pagination";
 import { blogData } from "@/lib/blog-data";
 import { BLOG_PATH } from "@/lib/constants";
-import { keywordSlugs } from "@/lib/keyword-pages";
 import { setupGuideSlugs } from "@/lib/deviceSetupGuides";
-import { SITE_URL } from "@/lib/site-config";
+import { keywordSlugs } from "@/lib/keyword-pages";
+import { getSiteUrl } from "@/lib/site-url";
 
-const RESERVED_SLUGS = ["blog", "step-guide", "setup", "api"];
+/**
+ * Slugs that must not be emitted as root `/slug` (they are real app routes or reserved).
+ */
+const RESERVED_SLUGS = new Set(["blog", "step-guide", "setup", "api", "_not-found"]);
 
-export default function sitemap(): MetadataRoute.Sitemap {
-  const lastMod = new Date();
-  const postCount = Object.keys(blogData).length;
-  const totalBlogPages = Math.max(1, Math.ceil(postCount / POSTS_PER_PAGE));
+function absUrl(origin: string, path: string): string {
+  const base = origin.replace(/\/$/, "");
+  if (!path || path === "/") return base;
+  const p = path.startsWith("/") ? path : `/${path}`;
+  return `${base}${p}`;
+}
 
-  const blogListingPages: MetadataRoute.Sitemap = [];
-  for (let p = 1; p <= totalBlogPages; p++) {
-    blogListingPages.push({
-      url: p === 1 ? `${SITE_URL}${BLOG_PATH}` : `${SITE_URL}${BLOG_PATH}?page=${p}`,
-      lastModified: lastMod,
-      changeFrequency: "weekly" as const,
-      priority: p === 1 ? 0.9 : 0.85,
-    });
+function dedupeSitemap(entries: MetadataRoute.Sitemap): MetadataRoute.Sitemap {
+  const seen = new Set<string>();
+  const out: MetadataRoute.Sitemap = [];
+  for (const e of entries) {
+    const loc = e.url.replace(/\/$/, "");
+    if (seen.has(loc)) continue;
+    seen.add(loc);
+    out.push({ ...e, url: loc });
   }
+  return out;
+}
+
+/**
+ * Indexable URLs only: no query strings, no fragments, https canonical host,
+ * one entry per location. Pagination (`/blog?page=`) is excluded per Google
+ * best practice and your property rules — list only `/blog` once.
+ */
+export default function sitemap(): MetadataRoute.Sitemap {
+  const origin = getSiteUrl();
+  const lastMod = new Date();
 
   const staticPages: MetadataRoute.Sitemap = [
-    { url: SITE_URL, lastModified: lastMod, changeFrequency: "weekly", priority: 1 },
-    { url: `${SITE_URL}${BLOG_PATH}`, lastModified: lastMod, changeFrequency: "weekly", priority: 0.9 },
     {
-      url: `${SITE_URL}/step-guide`,
+      url: absUrl(origin, ""),
+      lastModified: lastMod,
+      changeFrequency: "weekly",
+      priority: 1,
+    },
+    {
+      url: absUrl(origin, BLOG_PATH),
+      lastModified: lastMod,
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
+    {
+      url: absUrl(origin, "/step-guide"),
       lastModified: lastMod,
       changeFrequency: "monthly",
       priority: 0.9,
     },
   ];
 
+  const keywordPages: MetadataRoute.Sitemap = keywordSlugs
+    .filter((slug) => !RESERVED_SLUGS.has(slug))
+    .map((slug) => ({
+      url: absUrl(origin, `/${slug}`),
+      lastModified: lastMod,
+      changeFrequency: "weekly" as const,
+      priority: 0.85,
+    }));
+
   const blogPages: MetadataRoute.Sitemap = Object.keys(blogData).map((slug) => ({
-    url: `${SITE_URL}${BLOG_PATH}/${slug}`,
+    url: absUrl(origin, `${BLOG_PATH}/${slug}`),
     lastModified: lastMod,
     changeFrequency: "monthly" as const,
     priority: 0.8,
   }));
 
   const setupPages: MetadataRoute.Sitemap = setupGuideSlugs.map((slug) => ({
-    url: `${SITE_URL}/step-guide/${slug}`,
+    url: absUrl(origin, `/step-guide/${slug}`),
     lastModified: lastMod,
     changeFrequency: "monthly" as const,
     priority: 0.8,
   }));
 
-  const keywordPages: MetadataRoute.Sitemap = keywordSlugs
-    .filter((slug) => !RESERVED_SLUGS.includes(slug))
-    .map((slug) => ({
-      url: `${SITE_URL}/${slug}`,
-      lastModified: lastMod,
-      changeFrequency: "weekly" as const,
-      priority: 0.85,
-    }));
-
-  return [...staticPages, ...blogListingPages.slice(1), ...keywordPages, ...blogPages, ...setupPages];
+  return dedupeSitemap([...staticPages, ...keywordPages, ...blogPages, ...setupPages]);
 }
