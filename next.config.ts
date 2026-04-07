@@ -5,6 +5,8 @@ const nextConfig: NextConfig = {
     return [
       { source: "/blog/scopmedia-iptv", destination: "/blog/iptv-uk-tv", permanent: true },
       { source: "/scopmedia-iptv", destination: "/iptv-uk-tv", permanent: true },
+      { source: "/pricing", destination: "/#subscription", permanent: false },
+      { source: "/contact", destination: "/#contact", permanent: false },
     ];
   },
   images: {
