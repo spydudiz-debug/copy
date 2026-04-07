@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 
 import { BlogList } from "@/components/blog/BlogList";
+import { CTASection } from "@/components/CTASection";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 import { getAllPosts } from "@/lib/blog";
@@ -69,6 +70,8 @@ export default async function BlogPage({ searchParams }: Props) {
                 <BlogList posts={posts} initialPage={page} />
               </Suspense>
             </div>
+
+            <CTASection className="mt-14 sm:mt-16 lg:mt-20" />
           </Container>
         </Section>
       </main>

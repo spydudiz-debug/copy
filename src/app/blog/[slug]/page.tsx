@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 
+import { CTASection } from "@/components/CTASection";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 import { getPostBySlug, getPostSlugs } from "@/lib/blog";
@@ -46,7 +47,7 @@ export default async function BlogPostPage({ params }: Props) {
       <Navbar />
       <main className="pt-16 md:pt-[4.5rem]">
         <Section className="bg-[#f5f5f7] pb-16 pt-8 sm:pb-20 sm:pt-10 md:pt-12">
-          <Container className="max-w-3xl">
+          <Container className="max-w-3xl pb-0">
             <nav className="mb-8 text-sm font-medium text-[#64748b] sm:mb-10" aria-label="Breadcrumb">
               <Link href="/" className="text-[#6366f1] transition hover:text-[#4f46e5]">
                 Home
@@ -138,6 +139,10 @@ export default async function BlogPostPage({ params }: Props) {
               </Link>
             </div>
           </Container>
+
+          <div className="mx-auto mt-12 w-full max-w-7xl px-4 sm:mt-14 sm:px-6 lg:mt-16 lg:px-8">
+            <CTASection />
+          </div>
         </Section>
       </main>
       <Footer />
