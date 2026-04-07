@@ -1,4 +1,4 @@
----
+﻿---
 title: IPTV for Sale UK – Complete Guide for UK Users
 metaTitle: IPTV for Sale UK – Complete Guide 2026 | IPTV UK
 description: >-

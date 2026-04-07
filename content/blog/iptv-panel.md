@@ -1,4 +1,4 @@
----
+﻿---
 title: IPTV panel – Complete Guide for UK Users
 metaTitle: IPTV panel – Complete Guide 2026 | IPTV UK
 description: >-

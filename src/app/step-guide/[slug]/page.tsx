@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const guide = getDeviceGuideBySlug(slug);
   if (!guide) return { title: "Guide not found" };
 
-  const title = `${guide.title} — IPTV Setup | SCOP`;
+  const title = `${guide.title} — IPTV Setup | IPTV UK TV`;
   const description =
     guide.intro.length > 155 ? `${guide.intro.slice(0, 152)}…` : guide.intro;
 

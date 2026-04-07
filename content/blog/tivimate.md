@@ -1,4 +1,4 @@
----
+﻿---
 title: TiviMate – Complete Guide for UK Users
 metaTitle: TiviMate – Complete Guide 2026 | IPTV UK
 description: >-

@@ -1,4 +1,4 @@
----
+﻿---
 title: 'IPTV Trial: How to Test a Service Properly Before You Commit'
 metaTitle: IPTV Trial Tips — Test Streams & Plans Before You Pay
 description: >-

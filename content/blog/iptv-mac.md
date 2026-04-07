@@ -1,4 +1,4 @@
----
+﻿---
 title: IPTV Mac – Complete Guide for UK Users
 metaTitle: IPTV Mac – Complete Guide 2026 | IPTV UK
 description: >-

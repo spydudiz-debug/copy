@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 import { cn } from "@/lib/cn";
-import { SiteLogo } from "@/components/SiteLogo";
+import { Logo } from "@/components/Logo";
 import { Container } from "@/components/ui/Container";
 import { BLOG_PATH, IPTV_STORE_URL, STEP_GUIDE_PATH } from "@/lib/constants";
 
@@ -55,7 +55,7 @@ export function Navbar() {
     >
       <Container className="flex h-16 items-center md:h-[4.5rem]">
         <nav className="flex w-full items-center justify-between" aria-label="Primary">
-          <SiteLogo
+          <Logo
             priority
             className={cn(
               scrolled && "rounded-lg bg-[#0f172a] px-2 py-1 shadow-sm ring-1 ring-black/10"

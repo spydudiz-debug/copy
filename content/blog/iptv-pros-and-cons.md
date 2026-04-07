@@ -1,4 +1,4 @@
----
+﻿---
 title: IPTV pros and cons – Complete Guide for UK Users
 metaTitle: IPTV pros and cons – Complete Guide 2026 | IPTV UK
 description: >-

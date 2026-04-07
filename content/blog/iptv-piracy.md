@@ -1,4 +1,4 @@
----
+﻿---
 title: IPTV piracy – Complete Guide for UK Users
 metaTitle: IPTV piracy – Complete Guide 2026 | IPTV UK
 description: >-

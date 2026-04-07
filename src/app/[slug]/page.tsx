@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const description = buildSeoDescription(entry.keyword);
 
   return {
-    title: `${entry.keyword} | SCOP Media`,
+    title: `${entry.keyword} | IPTV UK TV`,
     description,
     alternates: {
       canonical: `/${slug}`,

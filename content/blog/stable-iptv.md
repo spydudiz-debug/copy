@@ -1,4 +1,4 @@
----
+﻿---
 title: Stable IPTV – Complete Guide for UK Users
 metaTitle: Stable IPTV – Complete Guide 2026 | IPTV UK
 description: >-

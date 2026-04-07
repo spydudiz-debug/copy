@@ -1,4 +1,4 @@
----
+﻿---
 title: How IPTV works – Complete Guide for UK Users
 metaTitle: How IPTV works – Complete Guide 2026 | IPTV UK
 description: >-

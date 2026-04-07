@@ -1,4 +1,4 @@
----
+﻿---
 title: Best IPTV reseller – Complete Guide for UK Users
 metaTitle: Best IPTV reseller – Complete Guide 2026 | IPTV UK
 description: >-

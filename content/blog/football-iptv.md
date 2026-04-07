@@ -1,4 +1,4 @@
----
+﻿---
 title: Football IPTV – Complete Guide for UK Users
 metaTitle: Football IPTV – Complete Guide 2026 | IPTV UK
 description: >-

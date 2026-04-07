@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import { cn } from "@/lib/cn";
-import { SiteLogo } from "@/components/SiteLogo";
+import { Logo } from "@/components/Logo";
 import { STEP_GUIDE_PATH } from "@/lib/constants";
 import { Container } from "@/components/ui/Container";
 
@@ -14,7 +14,7 @@ export function Footer() {
       <Container>
         <div className="grid gap-10 sm:gap-12 md:grid-cols-2 lg:grid-cols-4 lg:gap-10 xl:gap-12">
           <div className="max-w-sm lg:max-w-none">
-            <SiteLogo variant="footer" />
+            <Logo variant="footer" />
             <p className="mt-3 text-sm font-medium leading-relaxed text-white/65 sm:mt-4">
               Premium IPTV with reliable streams, global infrastructure, and support that actually
               answers—built for viewers who want live TV without the cable bill.
@@ -118,7 +118,7 @@ export function Footer() {
       <div className="mt-10 border-t border-white/10 sm:mt-12">
         <Container className="flex flex-col gap-4 py-6 sm:flex-row sm:items-center sm:justify-between sm:py-8">
           <p className="text-xs font-medium text-white/50">
-            © {new Date().getFullYear()} SCOP. All rights reserved.
+            © {new Date().getFullYear()} IPTV UK TV. All rights reserved.
           </p>
           <div className="flex flex-wrap gap-2.5 sm:gap-3">
             <button

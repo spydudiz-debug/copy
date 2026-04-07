@@ -1,4 +1,4 @@
----
+﻿---
 title: Pakistani IPTV – Complete Guide for UK Users
 metaTitle: Pakistani IPTV – Complete Guide 2026 | IPTV UK
 description: >-

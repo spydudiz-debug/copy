@@ -1,4 +1,4 @@
----
+﻿---
 title: Illegal IPTV – Complete Guide for UK Users
 metaTitle: Illegal IPTV – Complete Guide 2026 | IPTV UK
 description: >-

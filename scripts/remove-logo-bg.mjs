@@ -1,5 +1,5 @@
 /**
- * One-off: make near-black pixels transparent on the SCOOP Media PNG.
+ * One-off: make near-black pixels transparent on a legacy logo PNG (optional).
  * Run: node scripts/remove-logo-bg.mjs
  */
 import { readFile } from "node:fs/promises";

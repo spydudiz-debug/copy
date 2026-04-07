@@ -71,7 +71,7 @@ export function Features() {
               Binge What You Love Today!
             </h2>
             <p className="text-[0.9375rem] font-medium leading-relaxed text-[#6b7280] sm:text-base md:text-lg">
-              From live sports to the latest series, SCOP delivers a smooth viewing experience on your
+              From live sports to the latest series, IPTV UK TV delivers a smooth viewing experience on your
               favorite devices. Pick up where you left off and enjoy crisp picture quality without the
               frustration of freezes or endless loading.
             </p>

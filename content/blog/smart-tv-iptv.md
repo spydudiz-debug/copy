@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Smart TV IPTV: Setup, Brands, and What Actually Works'
 metaTitle: 'Smart TV IPTV Setup — Samsung, LG, Android TV Tips'
 description: >-

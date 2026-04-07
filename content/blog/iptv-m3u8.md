@@ -1,4 +1,4 @@
----
+﻿---
 title: 'IPTV M3U8 Explained: HLS Playlists and Smooth Streaming'
 description: >-
   Understand IPTV M3U8 playlists, how HLS streaming works with IPTV, and what to
@@ -92,4 +92,4 @@ Sometimes. VPNs add hops; if the VPN exit is far from the CDN, segments arrive l
 
 **IPTV m3u8** playlists power adaptive streaming for millions of viewers. Respect your network limits, choose updated players, and pair streams with realistic expectations for live delay—especially on shared Wi-Fi where one 4K stream can crowd out everything else unless you plan bandwidth deliberately.
 
-**Get a subscription built for modern apps:** [SCOP Media](https://scopmedia.com/index.php?rp=/store/iptv-subscriptions).
+**Get a subscription built for modern apps:** [IPTV UK TV](https://scopmedia.com/index.php?rp=/store/iptv-subscriptions).

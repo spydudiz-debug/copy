@@ -1,4 +1,4 @@
----
+﻿---
 title: UFC IPTV – Complete Guide for UK Users
 metaTitle: UFC IPTV – Complete Guide 2026 | IPTV UK
 description: >-

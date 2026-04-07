@@ -1,4 +1,4 @@
----
+﻿---
 title: Premier League IPTV – Complete Guide for UK Users
 metaTitle: Premier League IPTV – Complete Guide 2026 | IPTV UK
 description: >-

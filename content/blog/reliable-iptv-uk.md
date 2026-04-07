@@ -1,4 +1,4 @@
----
+﻿---
 title: Reliable IPTV UK – Complete Guide for UK Users
 metaTitle: Reliable IPTV UK – Complete Guide 2026 | IPTV UK
 description: >-

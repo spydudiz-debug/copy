@@ -1,4 +1,4 @@
----
+﻿---
 title: USA IPTV – Complete Guide for UK Users
 metaTitle: USA IPTV – Complete Guide 2026 | IPTV UK
 description: >-

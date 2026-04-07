@@ -1,4 +1,4 @@
----
+﻿---
 title: Best IPTV Subscription in UK 2026 – Complete Guide for UK Users
 metaTitle: Best IPTV Subscription in UK 2026 – Complete Guide 2026 | IPTV UK
 description: >-

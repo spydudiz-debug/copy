@@ -97,7 +97,7 @@ Legal IPTV UK
 IPTV Setup Guide UK
 Best IPTV for UK Users
 IPTV UK 2026
-ScopMedia IPTV
+IPTV UK TV
 `;
 
 function slugify(keyword) {
@@ -202,7 +202,7 @@ function category(keyword) {
     return "device";
   if (/xtream|panel|reseller/.test(k)) return "reseller";
   if (/what is|how iptv|guide|explained|pros|review|facts|truth|how to choose|setup guide/.test(k)) return "edu";
-  if (/scopmedia/.test(k)) return "scopmedia";
+  if (/iptv uk tv|iptv-uk-tv/i.test(k)) return "iptvuktv";
   return "general";
 }
 
@@ -217,7 +217,7 @@ function body(keyword, cat) {
     reseller: `**${k}** sits in the business and technical stack around IPTV: panels, APIs, credits, and customer management. Whether you are a viewer or exploring reseller tools, understanding roles (provider, panel, end user) helps you spot professional setups versus risky fly-by-night offers.\n\nIf you are buying as a customer, you rarely need to care about the panel brand—but you should care about uptime, ticket response times, and transparent policies.`,
     edu: `**${k}** is a core building block for understanding modern TV over the internet. Once you separate live IP delivery from traditional aerial or satellite, the rest—apps, playlists, EPG, multiscreen—becomes easier to compare across vendors.\n\nUse this page as a structured reference: skim the headings first, then dive into the sections that match your experience level.`,
     general: `**${k}** is widely searched by UK cord-cutters who want clearer channel choice and flexible devices. Definitions vary by provider; this guide uses a practical lens: what you get, how you set it up, and what to verify before you pay.\n\nWhether you are new to IPTV or upgrading from an older setup, the same principles apply: test on your network, read the small print, and keep security updates current.`,
-    scopmedia: `**ScopMedia IPTV** is the IPTV and streaming-related offering associated with the ScopMedia brand. This article is educational: features, billing, and line-ups can change, so always confirm details on official ScopMedia channels before you subscribe or install software.\n\nUK users should still apply the same checks as for any provider—clear terms, known payment methods, and realistic performance on your home broadband.`,
+    iptvuktv: `**IPTV UK TV** is our premium IPTV service for UK viewers. This article is educational: features, billing, and line-ups can change, so always confirm the latest details on our official site before you subscribe or install software.\n\nUK users should still apply the same checks as for any provider—clear terms, known payment methods, and realistic performance on your home broadband.`,
   };
 
   const featBlocks = {

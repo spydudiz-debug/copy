@@ -1,4 +1,4 @@
----
+﻿---
 title: Is IPTV legal – Complete Guide for UK Users
 metaTitle: Is IPTV legal – Complete Guide 2026 | IPTV UK
 description: >-

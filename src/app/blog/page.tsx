@@ -29,9 +29,9 @@ export async function generateMetadata({ searchParams }: Props): Promise<Metadat
   const canonical = page <= 1 ? BLOG_PATH : `${BLOG_PATH}?page=${page}`;
 
   return {
-    title: "IPTV Blog — Guides, Tips & Streaming Insights | SCOP",
+    title: "IPTV Blog — Guides, Tips & Streaming Insights | IPTV UK TV",
     description:
-      "Read SCOP Media’s IPTV blog: setup tips, streaming quality, subscriptions, and device guides in plain English.",
+      "Read the IPTV UK TV blog: setup tips, streaming quality, subscriptions, and device guides in plain English.",
     alternates: { canonical },
   };
 }

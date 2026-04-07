@@ -1,4 +1,4 @@
----
+﻿---
 title: IPTV risks – Complete Guide for UK Users
 metaTitle: IPTV risks – Complete Guide 2026 | IPTV UK
 description: >-

@@ -1,4 +1,4 @@
----
+﻿---
 title: Affordable IPTV UK – Complete Guide for UK Users
 metaTitle: Affordable IPTV UK – Complete Guide 2026 | IPTV UK
 description: >-

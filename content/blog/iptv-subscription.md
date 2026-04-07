@@ -1,4 +1,4 @@
----
+﻿---
 title: 'IPTV Subscription: Plans, Trials, and What to Check Before You Pay'
 description: >-
   Compare IPTV subscription options: billing cycles, device limits, trials, and
@@ -93,4 +93,4 @@ Some do, some gate 4K behind higher tiers. Confirm codec support on your TV stic
 
 The right **IPTV subscription** is transparent, testable, and supported. Start small, measure real-world streaming, then commit to longer plans if—and only if—the service earns your trust.
 
-**Browse IPTV subscription plans with clear checkout:** [SCOP Media store](https://scopmedia.com/index.php?rp=/store/iptv-subscriptions) · [Setup guides](/step-guide)
+**Browse IPTV subscription plans with clear checkout:** [IPTV UK TV store](https://scopmedia.com/index.php?rp=/store/iptv-subscriptions) · [Setup guides](/step-guide)

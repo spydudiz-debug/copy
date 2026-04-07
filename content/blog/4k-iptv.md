@@ -1,4 +1,4 @@
----
+﻿---
 title: 4K IPTV – Complete Guide for UK Users
 metaTitle: 4K IPTV – Complete Guide 2026 | IPTV UK
 description: >-

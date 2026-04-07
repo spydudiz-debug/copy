@@ -1,4 +1,4 @@
----
+﻿---
 title: IPTV safe or not – Complete Guide for UK Users
 metaTitle: IPTV safe or not – Complete Guide 2026 | IPTV UK
 description: >-

@@ -1,4 +1,4 @@
----
+﻿---
 title: What is IPTV – Complete Guide for UK Users
 metaTitle: What is IPTV – Complete Guide 2026 | IPTV UK
 description: >-

@@ -1,4 +1,4 @@
----
+﻿---
 title: Cricket IPTV – Complete Guide for UK Users
 metaTitle: Cricket IPTV – Complete Guide 2026 | IPTV UK
 description: >-

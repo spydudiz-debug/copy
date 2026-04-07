@@ -1,4 +1,4 @@
-# SEO blog posts
+﻿# SEO blog posts
 
 Each `.md` file is one article with YAML frontmatter (`title`, `description`, `keyword`) and markdown body. Target length: **800–1200 words**, H2/H3 structure, FAQs, CTA. Images use unique Unsplash URLs per article.
 

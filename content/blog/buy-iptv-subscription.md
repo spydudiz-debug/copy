@@ -1,4 +1,4 @@
----
+﻿---
 title: Buy IPTV Subscription – Complete Guide for UK Users
 metaTitle: Buy IPTV Subscription – Complete Guide 2026 | IPTV UK
 description: >-

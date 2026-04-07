@@ -1,4 +1,4 @@
----
+﻿---
 title: Bein Sports IPTV – Complete Guide for UK Users
 metaTitle: Bein Sports IPTV – Complete Guide 2026 | IPTV UK
 description: >-

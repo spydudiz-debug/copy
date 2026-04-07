@@ -1,4 +1,4 @@
----
+﻿---
 title: Legal IPTV UK – Complete Guide for UK Users
 metaTitle: Legal IPTV UK – Complete Guide 2026 | IPTV UK
 description: >-

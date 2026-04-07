@@ -91,7 +91,7 @@ const resellerPlans: {
     checkClass: "text-[#7c3aed]",
   },
   {
-    name: "Scop Premium",
+    name: "UK Premium",
     price: "£200.00",
     credits: 35,
     featured: true,

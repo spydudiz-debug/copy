@@ -1,4 +1,4 @@
----
+﻿---
 title: 'IPTV M3U Files: How They Work, How to Use Them Safely'
 description: >-
   Learn what an IPTV M3U playlist is, how players load channels from M3U links,
@@ -85,4 +85,4 @@ Technically yes with text editing or tools, but licensing and usability get mess
 
 **IPTV m3u** playlists are a practical, widely supported way to load channels—provided you protect your links, use trusted providers, and pair them with apps that respect updates and EPG files.
 
-**Need a subscription with clear login or playlist delivery?** Visit [SCOP Media](https://scopmedia.com/index.php?rp=/store/iptv-subscriptions) for IPTV plans and [setup guides](/step-guide) for your device.
+**Need a subscription with clear login or playlist delivery?** Visit [IPTV UK TV](https://scopmedia.com/index.php?rp=/store/iptv-subscriptions) for IPTV plans and [setup guides](/step-guide) for your device.

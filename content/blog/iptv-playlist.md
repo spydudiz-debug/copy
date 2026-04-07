@@ -1,4 +1,4 @@
----
+﻿---
 title: 'IPTV Playlist Guide: Build, Update, and Troubleshoot Channel Lists'
 description: >-
   Master IPTV playlist basics: formats, EPG pairing, auto-updates, and fixes
@@ -88,4 +88,4 @@ Not inherently better—different interfaces. Some users prefer Xtream login for
 
 A well-maintained **IPTV playlist** plus aligned EPG transforms internet TV from a spreadsheet of links into a real guide-driven experience. Protect your URLs, refresh responsibly, and choose apps that respect metadata—your future self will thank you on the night a major final goes to extra time.
 
-**Subscribe with clear credentials and step-by-step help:** [SCOP Media IPTV subscriptions](https://scopmedia.com/index.php?rp=/store/iptv-subscriptions). For device setup, see our [IPTV setup guides](/step-guide).
+**Subscribe with clear credentials and step-by-step help:** [IPTV UK TV subscriptions](https://scopmedia.com/index.php?rp=/store/iptv-subscriptions). For device setup, see our [IPTV setup guides](/step-guide).

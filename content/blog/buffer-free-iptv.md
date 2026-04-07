@@ -1,4 +1,4 @@
----
+﻿---
 title: Buffer-free IPTV – Complete Guide for UK Users
 metaTitle: Buffer-free IPTV – Complete Guide 2026 | IPTV UK
 description: >-

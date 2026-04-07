@@ -1,4 +1,4 @@
----
+﻿---
 title: IPTV Deals UK – Complete Guide for UK Users
 metaTitle: IPTV Deals UK – Complete Guide 2026 | IPTV UK
 description: >-

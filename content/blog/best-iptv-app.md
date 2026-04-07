@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Best IPTV App: What to Compare Before You Settle on One Player'
 metaTitle: 'Best IPTV App — Compare Features, Not Just Star Ratings'
 description: >-

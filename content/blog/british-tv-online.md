@@ -1,4 +1,4 @@
----
+﻿---
 title: British TV online – Complete Guide for UK Users
 metaTitle: British TV online – Complete Guide 2026 | IPTV UK
 description: >-

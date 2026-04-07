@@ -1,4 +1,4 @@
----
+﻿---
 title: Boxing IPTV – Complete Guide for UK Users
 metaTitle: Boxing IPTV – Complete Guide 2026 | IPTV UK
 description: >-

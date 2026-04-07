@@ -1,4 +1,4 @@
----
+﻿---
 title: Live sports streaming – Complete Guide for UK Users
 metaTitle: Live sports streaming – Complete Guide 2026 | IPTV UK
 description: >-

@@ -1,4 +1,4 @@
----
+﻿---
 title: IPTV for Android TV – Complete Guide for UK Users
 metaTitle: IPTV for Android TV – Complete Guide 2026 | IPTV UK
 description: >-

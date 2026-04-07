@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Android IPTV: Phones, Tablets, and TV Boxes Explained'
 metaTitle: 'Android IPTV — Phones, Tablets & TV Boxes Guide'
 description: >-

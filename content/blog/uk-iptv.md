@@ -1,4 +1,4 @@
----
+﻿---
 title: UK IPTV – Complete Guide for UK Users
 metaTitle: UK IPTV – Complete Guide 2026 | IPTV UK
 description: >-

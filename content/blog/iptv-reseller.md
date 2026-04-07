@@ -1,4 +1,4 @@
----
+﻿---
 title: IPTV reseller – Complete Guide for UK Users
 metaTitle: IPTV reseller – Complete Guide 2026 | IPTV UK
 description: >-

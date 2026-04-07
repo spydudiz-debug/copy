@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!post) return { title: "Post not found" };
   const docTitle = post.metaTitle
     ? post.metaTitle
-    : `${post.title.length > 45 ? `${post.title.slice(0, 42)}…` : post.title} | SCOP Blog`;
+    : `${post.title.length > 45 ? `${post.title.slice(0, 42)}…` : post.title} | IPTV UK TV Blog`;
 
   return {
     title: docTitle,

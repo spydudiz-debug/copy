@@ -1,4 +1,4 @@
----
+﻿---
 title: 'Firestick IPTV: Install, Optimise, and Avoid Common Mistakes'
 metaTitle: 'Firestick IPTV — Install, Speed & Buffering Fixes'
 description: >-

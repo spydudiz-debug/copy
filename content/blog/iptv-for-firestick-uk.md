@@ -1,4 +1,4 @@
----
+﻿---
 title: IPTV for Firestick UK – Complete Guide for UK Users
 metaTitle: IPTV for Firestick UK – Complete Guide 2026 | IPTV UK
 description: >-

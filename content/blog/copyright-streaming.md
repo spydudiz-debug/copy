@@ -1,4 +1,4 @@
----
+﻿---
 title: Copyright streaming – Complete Guide for UK Users
 metaTitle: Copyright streaming – Complete Guide 2026 | IPTV UK
 description: >-

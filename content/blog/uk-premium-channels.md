@@ -1,4 +1,4 @@
----
+﻿---
 title: UK premium channels – Complete Guide for UK Users
 metaTitle: UK premium channels – Complete Guide 2026 | IPTV UK
 description: >-

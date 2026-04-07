@@ -1,4 +1,4 @@
----
+﻿---
 title: 'IPTV Server Basics: What Powers Your Streams Behind the Scenes'
 description: >-
   Learn how an IPTV server fits into streaming delivery, why uptime matters, and
@@ -103,4 +103,4 @@ When support mentions **IPTV server** work, patience helps: rushed reboot loops 
 
 Keep firmware on your TV stick current—client bugs sometimes mimic **IPTV server** problems until an app update lands from the store.
 
-**Get subscription access with guided setup:** [SCOP Media IPTV store](https://scopmedia.com/index.php?rp=/store/iptv-subscriptions) · [Setup guides](/step-guide)
+**Get subscription access with guided setup:** [IPTV UK TV store](https://scopmedia.com/index.php?rp=/store/iptv-subscriptions) · [Setup guides](/step-guide)

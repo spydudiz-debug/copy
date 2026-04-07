@@ -1,4 +1,4 @@
----
+﻿---
 title: 'IPTV Channels List: How to Read, Sort, and Spot Quality Providers'
 description: >-
   Learn how an IPTV channels list is built, what group titles and backup streams
@@ -86,4 +86,4 @@ Some apps export M3U; others do not. If you need offline documentation of the **
 
 A trustworthy **IPTV channels list** is curated, labelled, and maintained—not just long. Compare providers by how you watch, not by raw counts alone.
 
-**Subscribe with transparent channel bundles and helpful support:** [SCOP Media IPTV store](https://scopmedia.com/index.php?rp=/store/iptv-subscriptions)
+**Subscribe with transparent channel bundles and helpful support:** [IPTV UK TV store](https://scopmedia.com/index.php?rp=/store/iptv-subscriptions)

@@ -9,7 +9,7 @@ import { Container } from "@/components/ui/Container";
 import { Section } from "@/components/ui/Section";
 
 export const metadata: Metadata = {
-  title: "IPTV Setup Guides — Firestick, Smart TV, Android, PC & Formuler | SCOP",
+  title: "IPTV Setup Guides — Firestick, Smart TV, Android, PC & Formuler | IPTV UK TV",
   description:
     "Step-by-step IPTV setup for Fire TV, Samsung & LG smart TVs, Android boxes, Windows PC, and Formuler (MyTVOnline). Install apps, enter login details, and start streaming.",
   alternates: {

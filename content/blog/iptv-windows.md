@@ -1,4 +1,4 @@
----
+﻿---
 title: IPTV Windows – Complete Guide for UK Users
 metaTitle: IPTV Windows – Complete Guide 2026 | IPTV UK
 description: >-

@@ -10,8 +10,18 @@ const inter = Inter({
   display: "swap",
 });
 
+const siteTitle = "IPTV UK TV - Best IPTV Service in UK";
+const siteDescription =
+  "Watch premium IPTV channels in the UK with high quality streaming, fast setup, and 7-day money-back guarantee.";
+
 export const metadata: Metadata = {
   metadataBase: new URL(CANONICAL_SITE_ORIGIN),
+  title: {
+    default: siteTitle,
+    template: "%s | IPTV UK TV",
+  },
+  description: siteDescription,
+  applicationName: "IPTV UK TV",
   robots: {
     index: true,
     follow: true,
@@ -20,12 +30,30 @@ export const metadata: Metadata = {
       follow: true,
     },
   },
-  title: "SCOP — Best IPTV Provider",
-  description:
-    "Premium IPTV subscription with no buffering, HD & 4K streaming, and global datacenters. Trusted by 5,000+ customers.",
   icons: {
-    icon: "/images/scoop-media-logo.png",
-    apple: "/images/scoop-media-logo.png",
+    apple: [{ url: "/logo.svg", type: "image/svg+xml", sizes: "180x180" }],
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_GB",
+    url: CANONICAL_SITE_ORIGIN,
+    siteName: "IPTV UK TV",
+    title: siteTitle,
+    description: siteDescription,
+    images: [
+      {
+        url: "/logo.svg",
+        width: 300,
+        height: 48,
+        alt: "IPTV UK TV — premium IPTV streaming in the UK",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteTitle,
+    description: siteDescription,
+    images: ["/logo.svg"],
   },
 };
 
